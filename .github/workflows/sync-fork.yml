@@ -1,3 +1,4 @@
+# Sync fork, versione 1.1.0: elenco dei commit compatto nella issue
 name: Sync fork
 on:
   schedule:
@@ -38,8 +39,8 @@ jobs:
           fi
 
           MACHINE=$(git show "$TARGET:$FILE" | grep -c '^#, machine' || true)
-          COMMITS=$(git log --format='- %h %s (%an, %ad)' --date=short "$CURRENT..$TARGET" -- "$FILE" || true)
-          [ -z "$COMMITS" ] && COMMITS="- (storia non lineare: confronta direttamente le due versioni)"
+          COMMITS=$(git log --format='%h  %ad  %s' --date=short "$CURRENT..$TARGET" -- "$FILE" || true)
+          [ -z "$COMMITS" ] && COMMITS="(storia non lineare: confronta direttamente le due versioni)"
           DATE=$(date -u +%Y-%m-%d)
 
           BODY=$(cat <<TXT
@@ -48,7 +49,9 @@ jobs:
           **Voci da rivedere (\`#, machine\`): $MACHINE**
 
           Commit che lo hanno modificato:
+          \`\`\`text
           $COMMITS
+          \`\`\`
 
           Confronto: https://github.com/anefzaoui/misterdownloadmanager/compare/${CURRENT:0:7}...${TARGET:0:7}
           File attuale: https://github.com/anefzaoui/misterdownloadmanager/blob/$TARGET/$FILE
