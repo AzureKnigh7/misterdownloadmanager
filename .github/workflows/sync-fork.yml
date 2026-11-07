@@ -1,0 +1,61 @@
+name: Sync fork
+on:
+  schedule:
+    - cron: "0 */12 * * *"   # ogni 12 ore: 00:00 e 12:00 UTC (01:00 e 13:00 in Italia d'inverno)
+  workflow_dispatch:          # pulsante per avviarlo a mano
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Allinea main all'originale e controlla it.tsv
+        env:
+          TOKEN: ${{ secrets.SYNC_TOKEN }}
+          GH_TOKEN: ${{ secrets.SYNC_TOKEN }}
+        run: |
+          FORK_REPO="AzureKnigh7/misterdownloadmanager"
+          FORK="https://x-access-token:${TOKEN}@github.com/${FORK_REPO}.git"
+          UPSTREAM="https://github.com/anefzaoui/misterdownloadmanager.git"
+          FILE="i18n/it.tsv"
+
+          TARGET=$(git ls-remote "$UPSTREAM" refs/heads/main | cut -f1)
+          CURRENT=$(git ls-remote "$FORK" refs/heads/main | cut -f1)
+          if [ "$TARGET" = "$CURRENT" ]; then
+            echo "Nessuna modifica: main è già allineato ($CURRENT)."
+            exit 0
+          fi
+
+          echo "Modifiche trovate: aggiorno main $CURRENT -> $TARGET"
+          git init -q repo && cd repo
+          git fetch -q "$UPSTREAM" main
+          git fetch -q "$FORK" main
+          git push -q --force "$FORK" "$TARGET:refs/heads/main"
+          echo "Sync completato."
+
+          # Controllo delle modifiche a it.tsv
+          if git diff --quiet "$CURRENT" "$TARGET" -- "$FILE"; then
+            echo "$FILE non è cambiato."
+            exit 0
+          fi
+
+          MACHINE=$(git show "$TARGET:$FILE" | grep -c '^#, machine' || true)
+          COMMITS=$(git log --format='- %h %s (%an, %ad)' --date=short "$CURRENT..$TARGET" -- "$FILE" || true)
+          [ -z "$COMMITS" ] && COMMITS="- (storia non lineare: confronta direttamente le due versioni)"
+          DATE=$(date -u +%Y-%m-%d)
+
+          BODY=$(cat <<TXT
+          Il file \`$FILE\` è cambiato nel \`main\` originale.
+
+          **Voci da rivedere (\`#, machine\`): $MACHINE**
+
+          Commit che lo hanno modificato:
+          $COMMITS
+
+          Confronto: https://github.com/anefzaoui/misterdownloadmanager/compare/${CURRENT:0:7}...${TARGET:0:7}
+          File attuale: https://github.com/anefzaoui/misterdownloadmanager/blob/$TARGET/$FILE
+          TXT
+          )
+
+          gh issue create -R "$FORK_REPO" \
+            --title "it.tsv aggiornato il $DATE: $MACHINE voci da rivedere" \
+            --body "$BODY"
+          echo "Issue di promemoria creata."
