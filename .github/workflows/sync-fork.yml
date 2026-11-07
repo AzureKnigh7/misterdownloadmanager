@@ -1,8 +1,8 @@
-# Sync fork, versione 1.3.0: elenco dei commit compatto e cliccabile nella issue
+# Sync fork, versione 1.4.0: controllo ogni 2 ore, elenco dei commit compatto e cliccabile nella issue
 name: Sync fork
 on:
   schedule:
-    - cron: "0 */12 * * *"   # ogni 12 ore: 00:00 e 12:00 UTC (01:00 e 13:00 in Italia d'inverno)
+    - cron: "0 */2 * * *"    # ogni 2 ore, allo scoccare dell'ora (orario UTC)
   workflow_dispatch:          # pulsante per avviarlo a mano
 jobs:
   sync:
