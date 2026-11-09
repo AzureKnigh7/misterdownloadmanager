@@ -1,0 +1,130 @@
+# Sync fork, versione 1.5.0: controllo ogni 2 ore; issue separate per it.tsv (voci #, machine) e per it.json (frasi nuove o modificate)
+name: Sync fork
+on:
+  schedule:
+    - cron: "0 */2 * * *"    # ogni 2 ore, allo scoccare dell'ora (orario UTC)
+  workflow_dispatch:          # pulsante per avviarlo a mano
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Allinea main all'originale e controlla it.tsv e it.json
+        env:
+          TOKEN: ${{ secrets.SYNC_TOKEN }}
+          GH_TOKEN: ${{ secrets.SYNC_TOKEN }}
+        run: |
+          FORK_REPO="AzureKnigh7/misterdownloadmanager"
+          FORK="https://x-access-token:${TOKEN}@github.com/${FORK_REPO}.git"
+          UPSTREAM="https://github.com/anefzaoui/misterdownloadmanager.git"
+          WEB="https://github.com/anefzaoui/misterdownloadmanager"
+          TSV="i18n/it.tsv"
+          SITE="i18n/site/it.json"
+
+          TARGET=$(git ls-remote "$UPSTREAM" refs/heads/main | cut -f1)
+          CURRENT=$(git ls-remote "$FORK" refs/heads/main | cut -f1)
+          if [ "$TARGET" = "$CURRENT" ]; then
+            echo "Nessuna modifica: main è già allineato ($CURRENT)."
+            exit 0
+          fi
+
+          echo "Modifiche trovate: aggiorno main $CURRENT -> $TARGET"
+          git init -q repo && cd repo
+          git fetch -q "$UPSTREAM" main
+          git fetch -q "$FORK" main
+          git push -q --force "$FORK" "$TARGET:refs/heads/main"
+          echo "Sync completato."
+
+          DATE=$(date -u +%Y-%m-%d)
+
+          # Elenco compatto e cliccabile dei commit che hanno toccato un file
+          commits() {
+            OUT=$(git log --abbrev=7 --format="- [%h]($WEB/commit/%H) %ad · %s" --date=short "$CURRENT..$TARGET" -- "$1" | sed -E 's/ \((part of |Fixes )?#[0-9]+\)//g' || true)
+            [ -z "$OUT" ] && OUT="(storia non lineare: confronta direttamente le due versioni)"
+            echo "$OUT"
+          }
+
+          # ---------- it.tsv: voci marcate #, machine ----------
+          if git diff --quiet "$CURRENT" "$TARGET" -- "$TSV"; then
+            echo "$TSV non è cambiato."
+          else
+            MACHINE=$(git show "$TARGET:$TSV" | grep -c '^#, machine' || true)
+            COMMITS=$(commits "$TSV")
+            {
+              echo "Il file \`$TSV\` è cambiato nel \`main\` originale."
+              echo
+              echo "**Voci da rivedere (\`#, machine\`): $MACHINE**"
+              echo
+              echo "Commit che lo hanno modificato:"
+              echo "$COMMITS"
+              echo
+              echo "Confronto: $WEB/compare/${CURRENT:0:7}...${TARGET:0:7}"
+              echo "File attuale: $WEB/blob/$TARGET/$TSV"
+            } > tsv_body.md
+            gh issue create -R "$FORK_REPO" \
+              --title "it.tsv aggiornato il $DATE: $MACHINE voci da rivedere" \
+              --body-file tsv_body.md
+            echo "Issue per $TSV creata."
+          fi
+
+          # ---------- it.json: frasi nuove o con testo inglese cambiato ----------
+          if git diff --quiet "$CURRENT" "$TARGET" -- "$SITE"; then
+            echo "$SITE non è cambiato."
+            exit 0
+          fi
+
+          export SITE CURRENT TARGET WEB
+          export COMMITS=$(commits "$SITE")
+          COUNT=$(python3 - <<'PY'
+          import json, os, subprocess
+          site, cur, tgt, web = (os.environ[k] for k in ("SITE", "CURRENT", "TARGET", "WEB"))
+
+          def load(rev):
+              r = subprocess.run(["git", "show", f"{rev}:{site}"], capture_output=True)
+              if r.returncode:
+                  return {}
+              return json.loads(r.stdout).get("segments", {})
+
+          old, new = load(cur), load(tgt)
+          added = [k for k in new if k not in old]
+          changed = [k for k in new if k in old and new[k].get("source") != old[k].get("source")]
+          removed = [k for k in old if k not in new]
+          review = added + changed
+
+          def line(k):
+              s = " ".join(new[k].get("source", "").split()).replace("`", "'")
+              return f"- `{k[:8]}` {s[:140] + ('…' if len(s) > 140 else '')}"
+
+          body = [
+              f"Il file `{site}` è cambiato nel `main` originale.",
+              "",
+              f"**Frasi da rivedere: {len(review)}** ({len(added)} nuove, {len(changed)} con il testo inglese modificato; {len(removed)} rimosse)",
+              "",
+              "Le frasi nuove sono in traduzione automatica: si corregge solo il campo `text`, lasciando i tag come sono.",
+              "",
+              "Commit che lo hanno modificato:",
+              os.environ.get("COMMITS", ""),
+              "",
+          ]
+          if review:
+              body += ["<details><summary>Frasi da rivedere (prime 40)</summary>", ""]
+              body += [line(k) for k in review[:40]]
+              if len(review) > 40:
+                  body.append(f"- … e altre {len(review) - 40}")
+              body += ["", "</details>", ""]
+          body += [
+              f"Confronto: {web}/compare/{cur[:7]}...{tgt[:7]}",
+              f"File attuale: {web}/blob/{tgt}/{site}",
+          ]
+          open("site_body.md", "w", encoding="utf-8").write("\n".join(body) + "\n")
+          print(len(review))
+          PY
+          )
+
+          if [ "$COUNT" = "0" ]; then
+            echo "$SITE è cambiato, ma non ci sono frasi nuove o modificate da rivedere."
+            exit 0
+          fi
+          gh issue create -R "$FORK_REPO" \
+            --title "it.json aggiornato il $DATE: $COUNT frasi da rivedere" \
+            --body-file site_body.md
+          echo "Issue per $SITE creata."
