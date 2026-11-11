@@ -585,6 +585,14 @@ These ship in a later version, when they're ready.
 
 ### Bugs being looked into
 
+- 🔄 The browser's video button over a video in a feed sending the feed's address, where yt-dlp
+  finds nothing (LinkedIn, Facebook, and other sites with feeds;
+  [#689](https://github.com/anefzaoui/misterdownloadmanager/issues/689),
+  [#643](https://github.com/anefzaoui/misterdownloadmanager/issues/643)): it now sends the post the
+  video sits in (LinkedIn, Facebook, X, Instagram, Reddit, TikTok, Vimeo, Dailymotion, and a
+  post's own link on other sites), else the video's own file, else it says to open the post; fix
+  in review, checked on a signed-in LinkedIn feed and Facebook's video page; Facebook's feed
+  posts still to check
 - 🔄 Torrents: a pause landing while a piece was being checked leaving the torrent one piece short
   until MDM restarted ([#706](https://github.com/anefzaoui/misterdownloadmanager/issues/706)): the
   piece is now downloaded again after the pause; fix in review
