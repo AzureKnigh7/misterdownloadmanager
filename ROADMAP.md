@@ -561,6 +561,10 @@ These ship in a later version, when they're ready.
 
 ### Bugs being looked into
 
+- 🔄 Windows: the window stopping on a stalled system while it checked its title bar's colours
+  ([#633](https://github.com/anefzaoui/misterdownloadmanager/issues/633),
+  [#583](https://github.com/anefzaoui/misterdownloadmanager/issues/583)): the colours are now set
+  once, when a window opens or the theme changes; fix in review
 - 🔄 Downloads from FileHippo failing at once with 412 Precondition Failed
   ([#630](https://github.com/anefzaoui/misterdownloadmanager/issues/630)): a link the site refuses
   to MDM now goes on from where the browser's own download of it had reached; fix in review, still
