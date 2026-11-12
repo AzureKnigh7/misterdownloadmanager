@@ -242,6 +242,11 @@
 #. a download's server's round trip: {ms} a number of milliseconds, {reach} near, medium or far
 #, machine
 	about {ms} ms ({reach})	כ- {ms} אלפיות שנייה ({reach})
+#. text in the Download video window
+#. a file size that is only an estimate, as a screen reader says it in the Download video window's list of qualities; {size} is "532 MB"
+#. {size} = a file size such as "4.2 MB" (keep the braces as they are)
+#, machine
+	about {size}	כ-{size}
 #. checkbox in the Add torrent window
 #. Torrent settings: other peers may connect to this computer
 #, machine
@@ -3962,6 +3967,7 @@
 #, machine
 	Size	גודל
 #. text in the Download video window
+#. the video's file size is not known
 #, machine
 	size unknown	גודל לא ידוע
 #. text in a download's Properties window
@@ -6568,6 +6574,10 @@ menu	E&xport	&ייצוא
 #. menu command in the main window
 #, machine
 menu	Edit queue	ערוך תור
+#. menu command in the main window
+#. View → Theme: a style theme's name (a white canvas, emerald fills, 6-point corners), a name: keep "Emerald" as written
+#, machine
+menu	Emerald	אמרלד
 #. menu command in the main window
 #. verb: unpack the downloaded archive (zip, 7z, rar) into its folder
 #, machine

@@ -270,6 +270,11 @@
 #. a download's server's round trip: {ms} a number of milliseconds, {reach} near, medium or far
 #, machine
 	about {ms} ms ({reach})	oko {ms} ms ({reach})
+#. text in the Download video window
+#. a file size that is only an estimate, as a screen reader says it in the Download video window's list of qualities; {size} is "532 MB"
+#. {size} = a file size such as "4.2 MB" (keep the braces as they are)
+#, machine
+	about {size}	oko {size}
 #. checkbox in the Add torrent window
 #. Torrent settings: other peers may connect to this computer
 #, machine
@@ -1383,6 +1388,11 @@
 #. the trailing ... means it is still going on: keep it
 #, machine
 	Downloading and verifying yt-dlp...	Preuzimanje i provjera yt-dlp-a...
+#. text in helpers.rs
+#. Video helpers: MDM's own yt-dlp is being downloaded
+#. the trailing ... means it is still going on: keep it
+#, machine
+	Downloading MDM's own copy...	Preuzimanje MDM-ove kopije...
 #. text in the Help menu's windows (About, updates, shortcuts, Tell a friend)
 #. Check for updates, while Update now downloads; {percent} like "42%"
 #, machine
@@ -1578,6 +1588,10 @@
 #. message or event log entry in the main window; text in the Options window
 #, machine
 	Export	Izvoz
+#. button in the Options window
+#. the trailing ... means it opens a window: keep it
+#, machine
+	Export...	Izvezi...
 #. text in the Options window
 #, machine
 	Extend the availability of Manifest 2 Chrome extensions	Proširite dostupnost Manifest 2 Chrome proširenja
@@ -2071,6 +2085,10 @@
 #. message or event log entry in the main window; text in the Options window
 #, machine
 	Import	Uvezi
+#. button in the Options window
+#. the trailing ... means it opens a window: keep it
+#, machine
+	Import...	Uvezi...
 #. value in a column's filter list in the download list
 #, machine
 	In a queue	U redu čekanja
@@ -2445,6 +2463,10 @@
 #. crash report window: looking on GitHub for an issue about the same problem
 #, machine
 	Looking for this problem on GitHub…	Traženje ovog problema na GitHubu…
+#. text in the Options window
+#. the trailing ... means it is still going on: keep it
+#, machine
+	Looking for your default browser...	Traženje zadanog preglednika...
 #. text in the Download video window
 #. the trailing ... means it is still going on: keep it
 #, machine
@@ -3973,6 +3995,7 @@
 #, machine
 	Size	Veličina
 #. text in the Download video window
+#. the video's file size is not known
 #, machine
 	size unknown	nepoznata veličina
 #. text in a download's Properties window

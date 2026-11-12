@@ -270,6 +270,11 @@
 #. a download's server's round trip: {ms} a number of milliseconds, {reach} near, medium or far
 #, machine
 	about {ms} ms ({reach})	ປະມານ {ms} ມິນລິວິນາທີ ({reach})
+#. text in the Download video window
+#. a file size that is only an estimate, as a screen reader says it in the Download video window's list of qualities; {size} is "532 MB"
+#. {size} = a file size such as "4.2 MB" (keep the braces as they are)
+#, machine
+	about {size}	ປະມານ {size}
 #. checkbox in the Add torrent window
 #. Torrent settings: other peers may connect to this computer
 #, machine
@@ -3990,6 +3995,7 @@
 #, machine
 	Size	ຂະໜາດ
 #. text in the Download video window
+#. the video's file size is not known
 #, machine
 	size unknown	ບໍ່ຮູ້ຂະໜາດ
 #. text in a download's Properties window
