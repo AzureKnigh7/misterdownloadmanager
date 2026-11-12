@@ -556,6 +556,12 @@ Bug fixes from the first days of 0.5.0, a Safari extension, and more file types.
 
 These ship in the next version.
 
+- ✅ A video a site sends through a program's address (`stream.php?file=…`,
+  `remote_control.php`) is named by what it is: the page's title (or the address's `file=` name)
+  and its real type, `Lecture.mp4`, not `stream.php`; the browser's media list shows that name
+  and type, and the Download video window saves it instead of failing on its `.php`
+  ([#695](https://github.com/anefzaoui/misterdownloadmanager/issues/695),
+  [#800](https://github.com/anefzaoui/misterdownloadmanager/issues/800))
 - ✅ **Add batch download from clipboard** reads every link copied (a list, a forum post): http,
   ftp and magnet links, each once, ticked in Link grabber, started or queued together with one
   summary at the end; a copied address with a number in it (`…/ep01.mp4`) opens Batch download
