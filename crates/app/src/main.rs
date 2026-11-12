@@ -71,6 +71,7 @@ mod update;
 mod videodlg;
 mod videolookup;
 mod wake;
+mod webmark;
 mod whereis;
 #[cfg(windows)]
 mod win32;

@@ -556,6 +556,10 @@ Bug fixes from the first days of 0.5.0, a Safari extension, and more file types.
 
 These ship in the next version.
 
+- ✅ Windows: downloads follow the Group Policy "Do not preserve zone information in file
+  attachments", as browsers' do; **Options → Save to → Mark downloaded files as coming from
+  the internet** (on by default) turns the mark off for MDM alone, on every system
+  ([#813](https://github.com/anefzaoui/misterdownloadmanager/issues/813))
 - ✅ No freeze of the window on **Tasks → Import** of a large file, or of one that isn't a list
   (a video, an archive, another program's backup): it is read beside the window, the status strip
   says "Reading …", a file over 64 MB is refused with a message, and Link grabber takes 10,000
