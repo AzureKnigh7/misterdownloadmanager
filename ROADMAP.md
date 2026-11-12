@@ -515,6 +515,9 @@ These ship in the next version.
   (as many as a file's connections), AES-128 pieces decrypted, expired pieces' addresses asked of
   yt-dlp again ([#531](https://github.com/anefzaoui/misterdownloadmanager/issues/531), part of
   [#769](https://github.com/anefzaoui/misterdownloadmanager/issues/769))
+- ✅ Image galleries through MDM's own downloader: gallery-dl lists the pictures, MDM brings
+  them in 4 at a time under the speed limits, gallery-dl fetches only what is left
+  ([#769](https://github.com/anefzaoui/misterdownloadmanager/issues/769))
 - ✅ Sites behind Akamai's bot check (a 403 page for MDM, the file for a browser) download, through the
   browser-like connection ([#771](https://github.com/anefzaoui/misterdownloadmanager/issues/771))
 - ✅ Crash and freeze reports no longer have their log's end filled with warnings about the
@@ -581,8 +584,6 @@ These ship in a later version, when they're ready.
   in review
 - 🔄 Linux and macOS: the system's gallery-dl used when MDM has none of its own, as yt-dlp is
   ([#571](https://github.com/anefzaoui/misterdownloadmanager/issues/571)): in review
-- 🔄 Image galleries through MDM's own downloader too, gallery-dl only finding the addresses
-  ([#769](https://github.com/anefzaoui/misterdownloadmanager/issues/769)): in progress
 - 🔄 Linux and macOS: the system's yt-dlp used when MDM has none of its own, with Helpers able\n  to switch to MDM's copy ([#452](https://github.com/anefzaoui/misterdownloadmanager/issues/452)): in review
 - 🔄 macOS: video look-ups in a copy of MDM a browser downloaded, without the Terminal command
   ([#330](https://github.com/anefzaoui/misterdownloadmanager/issues/330),
