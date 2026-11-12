@@ -557,6 +557,9 @@ Bug fixes from the first days of 0.5.0, a Safari extension, and more file types.
 
 These ship in the next version.
 
+- ✅ Windows: **Open with...** shows Windows' "Select an app to open this file" again, for
+  files whose name or folder has a space too
+  ([#720](https://github.com/anefzaoui/misterdownloadmanager/issues/720))
 - ✅ A file host's web page (a countdown, a captcha, DropMeFiles', dailyuploads') is never saved
   under the archive's name and called finished: the download stops, says the site sent its page
   and to finish in the browser, and the progress window's **Open in browser** opens the link
