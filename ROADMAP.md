@@ -556,6 +556,12 @@ Bug fixes from the first days of 0.5.0, a Safari extension, and more file types.
 
 These ship in the next version.
 
+- ✅ Fewer Download complete windows: downloads added together (a playlist, a batch, Link
+  grabber's links) show one summary once all are done, with how many finished and which failed,
+  Open folder and Show in list; a single download keeps its window
+  ([#766](https://github.com/anefzaoui/misterdownloadmanager/issues/766)). **Snooze** in Download complete keeps it away for
+  30 minutes, 1 hour, 8 hours or until MDM restarts, and Options → Downloads says until when, with
+  Resume now ([#741](https://github.com/anefzaoui/misterdownloadmanager/issues/741))
 - ✅ WinGet in the install steps: the README, the help and the website's download page give
   `winget install AhmedNefzaoui.MisterDownloadManager` and `winget upgrade`
   ([#798](https://github.com/anefzaoui/misterdownloadmanager/issues/798))
