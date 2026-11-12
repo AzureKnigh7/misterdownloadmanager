@@ -557,6 +557,9 @@ Bug fixes from the first days of 0.5.0, a Safari extension, and more file types.
 
 These ship in the next version.
 
+- ✅ Link grabber lists a web page's links when given the page's address (pasted, copied, in
+  a list), as the browser's "Download all links" does, instead of only the page itself
+  ([#705](https://github.com/anefzaoui/misterdownloadmanager/issues/705))
 - ✅ Windows: **Open with...** shows Windows' "Select an app to open this file" again, for
   files whose name or folder has a space too
   ([#720](https://github.com/anefzaoui/misterdownloadmanager/issues/720))
