@@ -6320,7 +6320,7 @@ menu	&Add new download	নতুন ডাউনলোড যোগ করুন
 #. menu command in the main window
 #. & marks the keyboard shortcut letter: keep one & before a letter of the translation
 #. the trailing ... means it opens a window: keep it
-menu	&Add new download...	নতুন ডাউনলোড যোগ করুন(&A)...
+menu	Add &new download...	নতুন ডাউনলোড যোগ করুন(&N)...
 #. menu command in the main window
 #. View → Text: letters drawn the classic way, hinted to whole pixels (crisp, coarse on a dense screen)
 #. & marks the keyboard shortcut letter: keep one & before a letter of the translation
@@ -6409,7 +6409,7 @@ menu	&Stop Download	ডাউনলোড থামান(&S)
 #. menu command in the main window
 #. View menu: submenu choosing how the text is drawn (smooth or classic)
 #. & marks the keyboard shortcut letter: keep one & before a letter of the translation
-menu	&Text	টেক্সট(&T)
+menu	Te&xt	টেক্সট(&X)
 #. menu command in the main window
 #. & marks the keyboard shortcut letter: keep one & before a letter of the translation
 menu	&Tray icon	ট্রে আইকন(&T)
