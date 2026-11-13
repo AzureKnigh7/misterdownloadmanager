@@ -557,6 +557,9 @@ Bug fixes from the first days of 0.5.0, a Safari extension, and more file types.
 
 These ship in the next version.
 
+- ✅ A video of unknown size no longer reads 99.9 % from its first second while yt-dlp downloads it,
+  and a video named after a page titled with its file's name gets its extension once (Dropbox's
+  `Episode 31.mp4.mp4`) ([#622](https://github.com/anefzaoui/misterdownloadmanager/issues/622))
 - ✅ Tests: the five that checked a long list is read in linear time against a fixed number of
   seconds (one failed on a slow macOS runner) now time the same work at two sizes, eight times
   apart, and fail only when the larger one costs over 24 times as much (a square costs 64 times),
