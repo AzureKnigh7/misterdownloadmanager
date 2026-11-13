@@ -557,6 +557,9 @@ Bug fixes from the first days of 0.5.0, a Safari extension, and more file types.
 
 These ship in the next version.
 
+- ✅ macOS: .torrent files open in MDM from Finder (double-click, Open With, the Dock's icon) and
+  magnet links from the browser, and Torrent settings can make MDM their default app there
+  ([#698](https://github.com/anefzaoui/misterdownloadmanager/issues/698))
 - ✅ Windows: a menu closes at once when you click outside MDM, instead of 0.4 seconds later
   ([#859](https://github.com/anefzaoui/misterdownloadmanager/issues/859))
 - ✅ No "The window stopped responding" report in the first minute after the computer wakes from
