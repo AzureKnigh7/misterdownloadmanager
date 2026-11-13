@@ -838,10 +838,6 @@
    "source": "The interface is in every language Windows 11 offers. The catalogs in <g1><x2/></g1> were made by machine translation, and each row marked <x3/> waits for a native speaker:",
    "text": "La interfaz está disponible en todos los idiomas que ofrece Windows 11. Los catálogos de <g1><x2/></g1> se tradujeron automáticamente, y cada fila marcada con <x3/> está pendiente de revisión por un hablante nativo:"
   },
-  "0c4e47b7b5c8f9f5": {
-   "source": "A freeze whose report shows the window thread inside the graphics driver as it shows a frame (<x1/> or <x2/> for Intel, <x3/> for NVIDIA, <x4/> for AMD, under <x5/>) is the driver's OpenGL stuck, not MDM: on Windows, choose <g6>View → Draw with → Direct3D</g6> (the default) and restart MDM, and update the graphics driver. If <g7>Draw with</g7> says Direct3D didn't start there, the line under it says why.",
-   "text": "Un bloqueo cuyo informe muestra el hilo de la ventana dentro del controlador gráfico mientras muestra un fotograma (<x1/> o <x2/> para Intel, <x3/> para NVIDIA, <x4/> para AMD, bajo <x5/>) es el OpenGL del controlador atascado, no MDM: en Windows, elige <g6>Ver → Dibujar con → Direct3D</g6> (el predeterminado) y reinicia MDM, y actualiza el controlador gráfico. Si <g7>Dibujar con</g7> indica que Direct3D no se inició, la línea inferior explica el motivo."
-  },
   "0c6ce890ecccf13e": {
    "source": "For an internet plan with a data cap, select <g1>Download limits</g1> on the left:",
    "text": "Si tu plan de internet tiene un límite de datos, selecciona <g1>Límites de descarga</g1> a la izquierda:"
@@ -3450,10 +3446,6 @@
    "source": "Choose the subtitles; tick Put them into the video to keep them inside the file.",
    "text": "Elige los subtítulos; marca Ponerlos en el vídeo para que se queden dentro del archivo."
   },
-  "33cd34762a5593c2": {
-   "source": "It takes the video you clicked: its own file when it plays one, or the stream the player loaded (HLS or DASH), else the page. When the button can't tell which one you mean, the toolbar button's <g1>Media on this page</g1> lists them all. Embedded players work too, and your sign-in for the site, the page that embeds the player and your browser's User-Agent go with it, so videos for members, or that play only on the site that embeds them, can be downloaded. Sound players get the button too.",
-   "text": "Toma el vídeo en el que hiciste clic: su propio archivo cuando reproduce uno, o el stream que cargó el reproductor (HLS o DASH), o la página. Cuando el botón no puede saber a cuál te refieres, el botón de la barra de herramientas <g1>Contenido multimedia en esta página</g1> los lista todos. Los reproductores incrustados también funcionan, y tu inicio de sesión para el sitio, la página que incrusta el reproductor y el User-Agent de tu navegador van con él, por lo que se pueden descargar vídeos para miembros, o que se reproducen solo en el sitio que los incrusta. Los reproductores de sonido también tienen el botón."
-  },
   "33e74c2131bce5b0": {
    "source": "Torrents share the cap fairly",
    "text": "Los torrents comparten el tope de forma justa"
@@ -3545,10 +3537,6 @@
   "35092e177f7efaa5": {
    "source": "Download complete with Open and Open folder",
    "text": "Descarga completa con Abrir y Abrir carpeta"
-  },
-  "3512eeafea5246da": {
-   "source": "<g1>Catching problems.</g1> When MDM crashes (a Windows exception, a signal on Linux, a Mach exception on macOS), panics, or freezes, it asks the monitor for a dump. A freeze is a frame of the window running more than 8 s, seen by a watchdog thread that ignores time spent asleep. It times both parts of a frame: what MDM handles (the commands that come in, the clock of downloads, queues and the Scheduler), which runs minimized too, and the drawing; never the wait between frames. The watchdog also measures how much processor time the window thread got meanwhile, and the report says what that means: it ran all along (a loop), it waited in a lock or on I/O (a deadlock), or it hardly ran in ordinary code, which is a computer too busy to run MDM or slow to load it from disk, most likely not MDM's bug (those share one signature, <x2/>). When the window thread is already back in the event loop by the time the dump is written, the freeze was over before the snapshot, so its stack can't explain it; those reports say so and share the signature <x3/>. macOS doesn't measure it yet. The monitor then writes a <g4>minidump</g4> of every thread from outside, through <x5/> and <x6/>. A crashed process never writes its own dump, which is how Firefox, Crashpad and Sentry do it too.",
-   "text": "<g1>Detección de problemas.</g1> Cuando MDM se bloquea (una excepción de Windows, una señal en Linux, una excepción de Mach en macOS), entra en pánico o se congela, pide un volcado al monitor. Una congelación es un fotograma de la ventana que se ejecuta durante más de 8 segundos, detectado por un hilo de vigilancia que ignora el tiempo de inactividad. Mide ambas partes de un fotograma: lo que MDM gestiona (los comandos entrantes, el reloj de las descargas, las colas y el Programador), que también se ejecuta minimizado, y el dibujo; nunca la espera entre fotogramas. El hilo de vigilancia también mide cuánto tiempo de procesador obtuvo el hilo de la ventana mientras tanto, y el informe indica lo que eso significa: se ejecutó todo el tiempo (un bucle), esperó en un bloqueo o en E/S (un interbloqueo), o apenas se ejecutó en código ordinario, lo que significa que el ordenador está demasiado ocupado para ejecutar MDM o es lento para cargarlo desde el disco, lo más probable es que no sea un error de MDM (esos comparten una firma, <x2/>). Cuando el hilo de la ventana ya ha vuelto al bucle de eventos en el momento en que se escribe el volcado, la congelación terminó antes de la instantánea, por lo que su pila no puede explicarla; esos informes lo indican y comparten la firma <x3/>. macOS aún no lo mide. El monitor luego escribe un <g4>minivolcado</g4> de cada hilo desde fuera, a través de <x5/> y <x6/>. Un proceso bloqueado nunca escribe su propio volcado, que es como lo hacen también Firefox, Crashpad y Sentry."
   },
   "3513f93cb0fa7d72": {
    "source": "<g1>Far</g1> (red): over 150 ms, usually another continent. A far server is often slower, and more connections help it most.",
@@ -4522,6 +4510,10 @@
    "source": "Links that work only once no longer fail with \"403 Forbidden\".",
    "text": "Los enlaces que funcionan solo una vez ya no fallan con «403 Forbidden»."
   },
+  "43510d0cf7beac55": {
+   "source": "<g1>Catching problems.</g1> When MDM crashes (a Windows exception, a signal on Linux, a Mach exception on macOS), panics, or freezes, it asks the monitor for a dump. A freeze is a frame of the window running more than 8 s, seen by a watchdog thread that ignores time spent asleep and the first minute after the computer wakes, while its disk, network and screen come back: a stall then is written to the log, and reported only if it lasts past that minute. It times both parts of a frame: what MDM handles (the commands that come in, the clock of downloads, queues and the Scheduler), which runs minimized too, and the drawing; never the wait between frames. The watchdog also measures how much processor time the window thread got meanwhile, and the report says what that means: it ran all along (a loop), it waited in a lock or on I/O (a deadlock), or it hardly ran in ordinary code, which is a computer too busy to run MDM or slow to load it from disk, most likely not MDM's bug (those share one signature, <x2/>). Each report also names what the frame was doing when it stopped (the tray icon, the downloads' progress, drawing the main window). When the window thread is already back in the event loop, or in the pause after a frame of a hidden window, by the time the dump is written, the freeze was over before the snapshot, so its stack can't explain it; those reports say so and share the signature <x3/>. macOS doesn't measure it yet. The monitor then writes a <g4>minidump</g4> of every thread from outside, through <x5/> and <x6/>. A crashed process never writes its own dump, which is how Firefox, Crashpad and Sentry do it too.",
+   "text": "<g1>Detección de problemas.</g1> Cuando MDM se bloquea (una excepción de Windows, una señal en Linux, una excepción de Mach en macOS), entra en pánico o se congela, pide al monitor un volcado. Una congelación es un fotograma de la ventana que se ejecuta durante más de 8 segundos, detectado por un hilo de vigilancia que ignora el tiempo de inactividad y el primer minuto después de que el ordenador se despierte, mientras su disco, red y pantalla se recuperan: entonces se escribe un bloqueo en el registro, y solo se informa si dura más allá de ese minuto. Mide ambas partes de un fotograma: lo que MDM gestiona (los comandos que entran, el reloj de las descargas, las colas y el Programador), que también se ejecuta minimizado, y el dibujo; nunca la espera entre fotogramas. El hilo de vigilancia también mide cuánto tiempo de procesador obtuvo el hilo de la ventana mientras tanto, y el informe dice lo que eso significa: se ejecutó todo el tiempo (un bucle), esperó en un bloqueo o en E/S (un interbloqueo), o apenas se ejecutó en código ordinario, lo que significa que el ordenador está demasiado ocupado para ejecutar MDM o es lento para cargarlo desde el disco, muy probablemente no sea un error de MDM (esos comparten una firma, <x2/>). Cada informe también indica lo que estaba haciendo el fotograma cuando se detuvo (el icono de la bandeja, el progreso de las descargas, el dibujo de la ventana principal). Cuando el hilo de la ventana ya ha vuelto al bucle de eventos, o a la pausa después de un fotograma de una ventana oculta, para cuando se escribe el volcado, la congelación ya había terminado antes de la instantánea, por lo que su pila no puede explicarla; esos informes lo indican y comparten la firma <x3/>. macOS aún no lo mide. El monitor luego escribe un <g4>minivolcado</g4> de cada hilo desde el exterior, a través de <x5/> y <x6/>. Un proceso bloqueado nunca escribe su propio volcado, que es como lo hacen también Firefox, Crashpad y Sentry."
+  },
   "436bac2c4f3d3f4c": {
    "source": "<g1>Downloads → Start queue</g1> and <g2>Downloads → Stop queue</g2> list them too.",
    "text": "<g1>Descargas → Iniciar cola</g1> y <g2>Descargas → Detener cola</g2> también las listan."
@@ -4577,6 +4569,10 @@
   "4447a34a8cbe1ae6": {
    "source": "<g1>The Categories pane and the menus</g1> (<g2>#113</g2>): the pane reads as a tree (each category named with its count, open or shut, selected), the menu bar and every right-click menu as menus whose items can be run, and <g3>Shift+F10</g3> or the <g4>Menu</g4> key opens the selected category's menu. A menu opened from the keyboard no longer stays invisible until the mouse moves.",
    "text": "<g1>El panel Categorías y los menús</g1> (<g2>#113</g2>): el panel se lee como un árbol (cada categoría nombrada con su recuento, abierta o cerrada, seleccionada), la barra de menú y cada menú contextual como menús cuyos elementos se pueden ejecutar, y <g3>Mayús+F10</g3> o la tecla <g4>Menú</g4> abre el menú de la categoría seleccionada. Un menú abierto desde el teclado ya no permanece invisible hasta que se mueve el ratón."
+  },
+  "44502a7e800ed659": {
+   "source": "A torrent stopped by one of these says so in its event log, and isn't shared again when MDM starts. Raise or turn off the limit to share it again. - <g1>Limit uploading for all torrents to</g1> — off by default. Caps what all your torrents together send to other peers, while they download and while they share. A torrent's own upload limit, in its progress window, applies on top of it. - <g2>Open magnet links and .torrent files with Mister Download Manager</g2> — Windows then opens magnet links in your browser and <x3/> files in Explorer with MDM. This is for your Windows account only; a program you chose in Windows' <g4>Open with</g4> stays first. The setup can turn it on for you. On Linux it makes MDM your desktop's default app for them; on macOS, their default app (Finder offers MDM in <g5>Open With</g5> for <x6/> files either way, and a double-click opens them in MDM when no other app is their default).",
+   "text": "Un torrent detenido por una de estas opciones lo indica en su registro de eventos y no se vuelve a compartir cuando se inicia MDM. Aumenta o desactiva el límite para volver a compartirlo. - <g1>Limitar la subida de todos los torrents a</g1>: desactivado por defecto. Limita lo que todos tus torrents envían en conjunto a otros pares, tanto mientras descargan como mientras comparten. El límite de subida propio de un torrent, en su ventana de progreso, se aplica además de este. - <g2>Abrir enlaces magnet y archivos .torrent con Mister Download Manager</g2>: Windows abre entonces los enlaces magnet de tu navegador y los archivos <x3/> del Explorador con MDM. Esto es solo para tu cuenta de Windows; un programa que hayas elegido en la opción <g4>Abrir con</g4> de Windows sigue siendo el principal. La configuración puede activarlo por ti. En Linux, convierte a MDM en la aplicación predeterminada de tu escritorio para ellos; en macOS, su aplicación predeterminada (Finder ofrece MDM en <g5>Abrir con</g5> para archivos <x6/> de cualquier manera, y un doble clic los abre en MDM cuando ninguna otra aplicación es su predeterminada)."
   },
   "445e6378c12f1e16": {
    "source": "<g1>Image gallery support:</g1> download whole galleries (Flickr, Imgur, DeviantArt and more) with gallery-dl.",
@@ -4798,6 +4794,10 @@
    "source": "The extension now installs from your browser's store, updates itself, and catches more of what you download.",
    "text": "La extensión ahora se instala desde la tienda de tu navegador, se actualiza automáticamente y captura más de lo que descargas."
   },
+  "483cd37a4558c14a": {
+   "source": "If neither can start, MDM draws with a software renderer (Microsoft's on Windows, Mesa's on Linux), so the window still opens (Remote Desktop, a virtual machine without a graphics driver). It works, but keeps the processor busier while a window changes.",
+   "text": "Si ninguno puede iniciarse, MDM dibuja con un renderizador de software (el de Microsoft en Windows, el de Mesa en Linux), por lo que la ventana se abre (Escritorio remoto, una máquina virtual sin controlador gráfico). Funciona, pero mantiene el procesador más ocupado mientras una ventana cambia."
+  },
   "487a0af4191d3496": {
    "source": "<g1><g2>Its site says so</g2></g1><g3>its site says</g3>",
    "text": "<g1><g2>Su sitio lo dice</g2></g1><g3>su sitio lo dice</g3>"
@@ -4925,10 +4925,6 @@
   "4a575d95633d11ec": {
    "source": "Free Download Manager",
    "text": "Free Download Manager"
-  },
-  "4a68031b1da16fe4": {
-   "source": "Right-click a link, a video, a sound or a picture and choose <g1>Download with Mister Download Manager</g1>. MDM downloads it whatever its type: you asked for it, so the file types list and the excluded sites don't apply here (they only decide which downloads MDM takes over by itself). A video that plays as a stream goes to the <g2>Download video</g2> window with the stream its player loaded (HLS or DASH), as the <g3>button over videos</g3> sends it, with your cookies for the stream's server and the page as the referrer.",
-   "text": "Haz clic con el botón derecho en un enlace, vídeo, archivo de audio o imagen y elige <g1>Descargar con Mister Download Manager</g1>. MDM lo descargará sea cual sea su tipo: como lo has solicitado, aquí no se aplican la lista de tipos de archivo ni los sitios excluidos (solo determinan qué descargas captura MDM automáticamente). Si un vídeo se reproduce como un flujo, se abre la ventana <g2>Descargar vídeo</g2> con el flujo que ha cargado el reproductor (HLS o DASH), igual que al usar el <g3>botón sobre los vídeos</g3>. Se envían las cookies del servidor del flujo y la página como referente."
   },
   "4a736a6235625512": {
    "source": "Connections and resuming in detail →",
@@ -6762,10 +6758,6 @@
    "source": "The video download button moves to a free corner instead of covering a control of the page, such as a thumbnail's watch-later button (<g1>#421</g1>). Dragging it still puts it where you want it.",
    "text": "El botón de descarga de vídeo se mueve a una esquina libre en lugar de cubrir un control de la página, como el botón de ver más tarde de una miniatura (<g1>#421</g1>). Arrastrarlo todavía lo pone donde quieras."
   },
-  "65da44cc551abd0f": {
-   "source": "<g1>Download complete</g1> shows the file's size, its address and where it was saved. Choose <g2>Open</g2>, <g3>Open with...</g3>, <g4>Open folder</g4> or <g5>Close</g5>. On Windows you can also drag the small box at the bottom right into Explorer, an email or a chat to drop the file there. The window shows above your other programs until you click it, without taking the keyboard from the one you're typing in.",
-   "text": "<g1>Descarga completa</g1> muestra el tamaño del archivo, su dirección y dónde se ha guardado. Elige <g2>Abrir</g2>, <g3>Abrir con...</g3>, <g4>Abrir carpeta</g4> o <g5>Cerrar</g5>. En Windows también puedes arrastrar el cuadro pequeño de la esquina inferior derecha al Explorador, a un correo electrónico o a un chat para soltar allí el archivo. La ventana permanece sobre los demás programas hasta que haces clic en ella, pero no le quita el teclado al programa en el que estás escribiendo."
-  },
   "662e8cdda4078826": {
    "source": "32 MiB, one connection in three crawls at 128 KB/s",
    "text": "32 MiB, una conexión en tres rastreos a 128 KB/s"
@@ -7005,6 +6997,10 @@
   "6a3e3e5c75482fe1": {
    "source": "Contribute — Mister Download Manager",
    "text": "Contribuir — Mister Download Manager"
+  },
+  "6a404128afe84a22": {
+   "source": "A freeze whose report shows the window thread inside the graphics driver as it shows a frame (<x1/> or <x2/> for Intel, <x3/> for NVIDIA, <x4/> for AMD, under <x5/>) is the driver's OpenGL stuck, not MDM: on Windows, choose <g6>View → Draw with → Direct3D</g6> (the default) and restart MDM, and update the graphics driver. If <g7>Draw with</g7> says Direct3D didn't start there, the line under it says why; MDM then remembers the freeze and draws with WARP from the next start.",
+   "text": "Un bloqueo cuyo informe muestra el hilo de la ventana dentro del controlador gráfico mientras muestra un fotograma (<x1/> o <x2/> para Intel, <x3/> para NVIDIA, <x4/> para AMD, bajo <x5/>) es el OpenGL del controlador atascado, no MDM: en Windows, elige <g6>Ver → Dibujar con → Direct3D</g6> (el predeterminado) y reinicia MDM, y actualiza el controlador gráfico. Si <g7>Dibujar con</g7> dice que Direct3D no se inició allí, la línea debajo indica el motivo; MDM entonces recuerda el bloqueo y dibuja con WARP desde el siguiente inicio."
   },
   "6a658020a3c19e30": {
    "source": "Other systems and files",
@@ -7842,10 +7838,6 @@
    "source": "From top to bottom:",
    "text": "De arriba abajo:"
   },
-  "76e8fe34285e22ca": {
-   "source": "Turn the look-ups off in <g1>Options → Archives → Look links up when they arrive</g1>. Some file hosts count a look-up as a download.",
-   "text": "Desactiva las búsquedas en <g1>Opciones → Archivos → Buscar enlaces cuando lleguen</g1>. Algunos servicios de alojamiento de archivos cuentan una búsqueda como una descarga."
-  },
   "7704f35f9d60deac": {
    "source": "Our benchmark, replayed: the same PC, the same test server, the median of alternating runs.",
    "text": "Nuestro punto de referencia, reproducido: el mismo PC, el mismo servidor de prueba, la mediana de ejecuciones alternas."
@@ -8037,10 +8029,6 @@
   "7a31f6dd87f98452": {
    "source": "<g1>The window no longer freezes when the system's sleep or keychain service is slow</g1> (follows <g2>#222</g2>): a queue set to <g3>Wake the computer to run this queue</g3> asks the system to keep the computer awake while it runs. On Linux that is logind, which can be slow to answer just after the computer wakes, exactly when such a queue starts, and MDM waited for it on the window's own thread (asking again every 5 seconds while it refused). It is now asked in the background, on every system; the queue's downloads, retries and log lines are the same. A keyring that doesn't answer at start (a stopped GNOME Keyring) is now waited for once, at most 5 seconds, instead of once per saved password, and saving the list no longer asks it at all. On Linux the check for a tray to hide windows in, and in Download File Info the check that <g4>Save As</g4> isn't a folder (slow on a network share that doesn't answer), no longer run on the window's thread on every frame.",
    "text": "<g1>La ventana ya no se congela cuando el servicio de suspensión o de llavero del sistema es lento</g1> (sigue a <g2>#222</g2>): una cola configurada para <g3>Reactivar el equipo para ejecutar esta cola</g3> pide al sistema que mantenga el equipo activo mientras se ejecuta. En Linux, es logind, que puede tardar en responder justo después de que el equipo se reactive, exactamente cuando se inicia una cola de este tipo, y MDM lo esperaba en el propio hilo de la ventana (preguntando de nuevo cada 5 segundos mientras se negaba). Ahora se pregunta en segundo plano, en todos los sistemas; las descargas, reintentos y líneas de registro de la cola son los mismos. Un llavero que no responde al inicio (un GNOME Keyring detenido) ahora se espera una vez, como máximo 5 segundos, en lugar de una vez por cada contraseña guardada, y guardar la lista ya no lo pregunta en absoluto. En Linux, la comprobación de una bandeja para ocultar ventanas, y en Información del archivo de descarga la comprobación de que <g4>Guardar como</g4> no es una carpeta (lento en un recurso compartido de red que no responde), ya no se ejecutan en el hilo de la ventana en cada fotograma."
-  },
-  "7a431c024b9ed18e": {
-   "source": "Choose <g1>Subtitles</g1> if you want them (see below).",
-   "text": "Elija <g1>Subtítulos</g1> si los quiere (vea más abajo)."
   },
   "7a5b7ab31d5f22cb": {
    "source": "Click <g1>Add Torrent</g1> on the toolbar to open a <x2/> file, or use the arrow next to it for <g3>Add magnet link...</g3>. A magnet link pasted into <g4>Add URL</g4> works too. Torrents land in the same list as your other downloads, marked <g5>Torrent</g5> in the <g6>Source</g6> column, and go into queues and the Scheduler like them.",
@@ -9238,10 +9226,6 @@
    "source": "<g1>Themes</g1><g2>Nine looks, light and dark, from Classic to Aqua, or your own in a text file.</g2>",
    "text": "<g1>Temas</g1><g2>Nueve apariencias, claras y oscuras, desde Clásico hasta Aqua, o la tuya propia en un archivo de texto.</g2>"
   },
-  "8b93f9dffbe6efdb": {
-   "source": "If Direct3D, Vulkan or Metal can't start on your computer (no driver for it, some virtual machines), or its first window doesn't show within 10 seconds of its own (the time MDM spends loading your list and its icons doesn't count, however slow the computer is just after it starts), MDM draws with OpenGL, and <g1>View → Draw with</g1> says so and why. Choosing it again tries it again at the next start.",
-   "text": "Si Direct3D, Vulkan o Metal no pueden iniciarse en tu ordenador (no hay controlador para ello, algunas máquinas virtuales), o su primera ventana no aparece en los 10 segundos siguientes a su inicio (el tiempo que MDM tarda en cargar tu lista y sus iconos no cuenta, por muy lento que sea el ordenador justo después de arrancar), MDM dibuja con OpenGL, y <g1>Ver → Dibujar con</g1> lo indica y explica el motivo. Si lo seleccionas de nuevo, lo intentará otra vez en el siguiente inicio."
-  },
   "8b95ee287644fd4f": {
    "source": "Mister Download Manager's link grabber collects a page's links, sorts them into packages, checks which are online and extracts the archives they bring.",
    "text": "El capturador de enlaces de Mister Download Manager recopila los enlaces de una página, los clasifica en paquetes, comprueba cuáles están en línea y extrae los archivos que contienen."
@@ -10001,6 +9985,10 @@
   "9757a8b628979f6a": {
    "source": "The list shows each quality with its size, best first, and the sound alone at the end. Check <g1>Save to</g1> and <g2>File name</g2>, then click <g3>Download Now</g3>, or <g4>Later</g4> to put it in the list for later. The video gets its own row and progress window, like any other download.",
    "text": "La lista muestra cada calidad con su tamaño, la mejor primero, y solo el sonido al final. Comprueba <g1>Guardar en</g1> y <g2>Nombre de archivo</g2>, luego haz clic en <g3>Descargar ahora</g3>, o en <g4>Más tarde</g4> para añadirlo a la lista para después. El vídeo obtiene su propia fila y ventana de progreso, como cualquier otra descarga."
+  },
+  "9763111f0a019af1": {
+   "source": "If Direct3D, Vulkan or Metal can't start on your graphics card (no driver for it, some virtual machines), or its first window doesn't show within 10 seconds of its own (the time MDM spends loading your list and its icons doesn't count, however slow the computer is just after it starts), MDM draws with OpenGL, and <g1>View → Draw with</g1> says so and why. Choosing it again tries it again at the next start.",
+   "text": "Si Direct3D, Vulkan o Metal no pueden iniciarse en tu tarjeta gráfica (no hay controlador para ella, algunas máquinas virtuales), o su primera ventana no aparece en 10 segundos (el tiempo que MDM tarda en cargar tu lista y sus iconos no cuenta, por muy lento que sea el ordenador justo después de arrancar), MDM dibuja con OpenGL, y <g1>Ver → Dibujar con</g1> lo indica y explica el motivo. Al volver a seleccionarlo, se intenta de nuevo en el siguiente inicio."
   },
   "976e1bc04dee0c02": {
    "source": "Both the address you clicked and the one its redirects led to are checked, so a site you excluded stays excluded even when it sends you to another server. Everything else stays with the browser. Changes in Options reach the browser within a minute; you don't need to restart it.",
@@ -11790,10 +11778,6 @@
    "source": "Keep changes focused and match the code around them. A few rules hold everywhere:",
    "text": "Limita los cambios a lo necesario y sigue el estilo del código que los rodea. Estas reglas se aplican en todas partes:"
   },
-  "b1cfb9dac9c38d80": {
-   "source": "Then yt-dlp does what it does after a download: it joins the video and its sound with ffmpeg into one MP4, saves or embeds the subtitles, and converts the sound for an MP3, Opus or FLAC choice.",
-   "text": "Luego yt-dlp hace lo que hace después de una descarga: une el vídeo y su sonido con ffmpeg en un solo MP4, guarda o incrusta los subtítulos y convierte el sonido para una elección de MP3, Opus o FLAC."
-  },
   "b1d90b3e9d2a1cd5": {
    "source": "runs unit tests and end-to-end downloads against <x1/> with injected faults (slow, dropped and refused connections, servers without ranges, changing files). <x2/> runs the published speed comparison; its raw data is in <x3/>.",
    "text": "ejecuta pruebas unitarias y descargas de extremo a extremo contra <x1/> con fallos inyectados (conexiones lentas, caídas y rechazadas, servidores sin rangos, archivos cambiantes). <x2/> ejecuta la comparación de velocidad publicada; sus datos brutos están en <x3/>."
@@ -11817,6 +11801,10 @@
   "b2181eccf65e86be": {
    "source": "This <g1>website</g1> counts visits with <g2>Statcounter</g2>, which sets a cookie and sees your IP address; it runs only on the website, never in the app.",
    "text": "Este <g1>sitio web</g1> cuenta las visitas con <g2>Statcounter</g2>, que establece una cookie y ve su dirección IP; solo se ejecuta en el sitio web, nunca en la aplicación."
+  },
+  "b21b0cc3853450de": {
+   "source": "On Windows, when OpenGL fails on a card without Direct3D 12, MDM draws with Direct3D on Microsoft's software renderer (WARP) from the next start, and <g1>View → Draw with</g1> says why: OpenGL couldn't start, it is too old to draw MDM (older than 3.0, such as Intel's first HD Graphics, whose OpenGL 2.1 drew MDM's windows as garbage), its first window didn't show within 10 seconds, or MDM froze inside the graphics driver while OpenGL showed a frame (the older Intel HD Graphics and AMD Radeon cards' drivers did). Choosing <g2>OpenGL</g2> there tries it again.",
+   "text": "En Windows, si OpenGL falla en una tarjeta sin Direct3D 12, MDM dibuja con Direct3D en el renderizador de software de Microsoft (WARP) desde el siguiente inicio, y <g1>Ver → Dibujar con</g1> indica el motivo: OpenGL no pudo iniciarse, es demasiado antiguo para dibujar MDM (anterior a 3.0, como las primeras Intel HD Graphics, cuyo OpenGL 2.1 dibujaba las ventanas de MDM como basura), su primera ventana no apareció en 10 segundos, o MDM se bloqueó dentro del controlador gráfico mientras OpenGL mostraba un fotograma (los controladores de las antiguas Intel HD Graphics y AMD Radeon lo hacían). Al elegir <g2>OpenGL</g2> allí, se intenta de nuevo."
   },
   "b23baab9a4561a1d": {
    "source": "Pauses running downloads.",
@@ -12866,10 +12854,6 @@
    "source": "Choose before you add",
    "text": "Elige antes de añadir"
   },
-  "c20a850dfc745632": {
-   "source": "If neither can start, MDM draws with a software renderer (Microsoft's on Windows, Mesa's on Linux), so the window still opens (Remote Desktop, a virtual machine without a graphics driver). It works, but keeps the processor busier.",
-   "text": "Si ninguno puede iniciarse, MDM dibuja con un renderizador de software (el de Microsoft en Windows, el de Mesa en Linux), por lo que la ventana se abre igualmente (Escritorio remoto, una máquina virtual sin controlador de gráficos). Funciona, pero mantiene el procesador más ocupado."
-  },
   "c21ae87a328182aa": {
    "source": "<g1>Link grabber</g1><g2>A page's links gathered, sorted into packages and checked online, then the archives unpacked when they arrive.</g2>",
    "text": "<g1>Capturador de enlaces</g1><g2>Los enlaces de una página se recopilan, se clasifican en paquetes y se verifican en línea, y luego los archivos se descomprimen cuando llegan.</g2>"
@@ -13405,10 +13389,6 @@
   "ca67cb26c4c8dabb": {
    "source": "View → Theme changes how MDM looks at once and keeps everything where it was. Pick one of the built-in looks, each with a light and a dark side, or make your own in a text file.",
    "text": "Ver → Tema cambia el aspecto de MDM al instante y mantiene todo en su sitio. Elige uno de los diseños integrados, cada uno con un lado claro y otro oscuro, o crea el tuyo propio en un archivo de texto."
-  },
-  "ca722db87f0d3bad": {
-   "source": "Last updated 2026-11-12 · applies to the app, the browser extension and misterdownloadmanager.com",
-   "text": "Última actualización: 12/11/2026 · se aplica a la aplicación, la extensión del navegador y misterdownloadmanager.com"
   },
   "ca7a6b77fb1e5a3c": {
    "source": "strengthens every edge and text colour on top.",
@@ -15266,10 +15246,6 @@
    "source": "Point at the video in your browser and click the Download video button that appears over it, or paste the page's address into Tasks → Download video from a…",
    "text": "Apunte al vídeo en su navegador y haga clic en el botón Descargar vídeo que aparece sobre él, o pegue la dirección de la página en Tareas → Descargar vídeo de una…"
   },
-  "e7e684a8f8aec6c8": {
-   "source": "<g1>Hide web pages</g1> (on by default) leaves out links to pages (<x2/>, <x3/> and the like): they are neither shown nor downloaded.",
-   "text": "<g1>Ocultar páginas web</g1> (activado por defecto) omite los enlaces a páginas (<x2/>, <x3/> y similares): no se muestran ni se descargan."
-  },
   "e7f203ecd75caead": {
    "source": "Can my AI assistant use MDM? — Mister Download Manager",
    "text": "¿Puede mi asistente de IA usar MDM? — Mister Download Manager"
@@ -15577,10 +15553,6 @@
   "ec83076f0311f20e": {
    "source": "A theme is one small text file in <g1>TOML</g1> (or JSON, <x2/>; or a <g3>colour scheme</g3>, <x4/>). It names only what it changes; everything else comes from the theme it <x5/>:",
    "text": "Un tema es un pequeño archivo de texto en <g1>TOML</g1> (o JSON, <x2/>; o un <g3>esquema de color</g3>, <x4/>). Solo nombra lo que cambia; todo lo demás proviene del tema que <x5/>:"
-  },
-  "ec8dbbc2dc38cd32": {
-   "source": "A torrent stopped by one of these says so in its event log, and isn't shared again when MDM starts. Raise or turn off the limit to share it again. - <g1>Limit uploading for all torrents to</g1> — off by default. Caps what all your torrents together send to other peers, while they download and while they share. A torrent's own upload limit, in its progress window, applies on top of it. - <g2>Open magnet links and .torrent files with Mister Download Manager</g2> — Windows then opens magnet links in your browser and <x3/> files in Explorer with MDM. This is for your Windows account only; a program you chose in Windows' <g4>Open with</g4> stays first. The setup can turn it on for you.",
-   "text": "Un torrent detenido por una de estas opciones lo indica en su registro de eventos y no se vuelve a compartir cuando se inicia MDM. Aumenta el límite o desactívalo para volver a compartirlo. - <g1>Limitar subida para todos los torrents a</g1> — desactivado por defecto. Limita el total que envían todos tus torrents a otros pares, tanto mientras descargan como mientras comparten. El límite de subida propio de cada torrent, en su ventana de progreso, se aplica además de este. - <g2>Abrir enlaces magnet y archivos .torrent con Mister Download Manager</g2> — Windows abre entonces los enlaces magnet en tu navegador y los archivos <x3/> en el Explorador con MDM. Esto solo se aplica a tu cuenta de Windows; los programas que hayas elegido en <g4>Abrir con</g4> de Windows siguen teniendo prioridad. El programa de instalación puede activarlo por ti."
   },
   "ec99486fc82e0b86": {
    "source": "Options",
@@ -16106,10 +16078,6 @@
    "source": "Download File Info",
    "text": "Información del archivo de descarga"
   },
-  "f385c86abe758db3": {
-   "source": "Last updated 2026-11-12",
-   "text": "Última actualización: 12-11-2026"
-  },
   "f3901fedc4a7dd52": {
    "source": "<g1>Browser extension</g1><g2>Downloads you click in Chrome, Edge, Brave, Opera, Vivaldi or Firefox go straight to MDM, sign-in included.</g2>",
    "text": "<g1>Extensión del navegador</g1><g2>Las descargas en las que haces clic en Chrome, Edge, Brave, Opera, Vivaldi o Firefox van directamente a MDM, incluido el inicio de sesión.</g2>"
@@ -16388,7 +16356,7 @@
   },
   "f89c54d71eb189a4": {
    "source": "If the graphics card is reset while MDM runs (a driver update), MDM starts again by itself. Lost twice in 10 minutes, it goes back to OpenGL, and <g1>View → Draw with</g1> says why.",
-   "text": "Si la tarjeta gráfica se reinicia mientras MDM se ejecuta (una actualización de controlador), MDM se inicia de nuevo por sí mismo. Si se pierde dos veces en 10 minutos, vuelve a OpenGL, y <g1>Ver → Dibujar con</g1> indica el motivo."
+   "text": "Si la tarjeta gráfica se reinicia mientras MDM se ejecuta (una actualización del controlador), MDM se inicia de nuevo por sí mismo. Si se pierde dos veces en 10 minutos, vuelve a OpenGL, y <g1>Ver → Dibujar con</g1> indica el motivo."
   },
   "f8b52274ed125d5f": {
    "source": "Tick <g1>Wake the computer to run this queue</g1> and a sleeping computer is woken a minute before the start time, so the network is back when the queue begins. It stays awake while the queue runs; afterwards its own sleep settings apply again. The line under the option says when the next wake is, or why there can't be one.",
@@ -16653,10 +16621,6 @@
   "fbba8f18d2fae06e": {
    "source": "A text box's bottom line while it can be typed in",
    "text": "La línea inferior de un cuadro de texto mientras se puede escribir en él"
-  },
-  "fbc41fd4efa0fd9a": {
-   "source": "Download a video; <x1/> takes a quality's selector from <x2/> (<x3/> = the best single file; <x4/> = the sound alone as the site has it, not converted; <x5/>, <x6/>, <x7/> or <x8/> = the sound as an MP3 at that bitrate, <x9/> at its best variable one; <x10/> = as Opus; <x11/> = as FLAC, lossless but no better than the site's sound; conversions need ffmpeg). <x12/>: MDM's own downloader brings each stream yt-dlp finds over this many connections (8 by default, 1 to 128), a stream in pieces (HLS, DASH) this many pieces at once. <x13/> saves subtitles beside it: language codes from <x14/> (<x15/>), or <x16/> for every one the uploader gave; <x17/> takes the site's automatic captions instead; <x18/> puts them into the video (needs ffmpeg, MP4 or MKV). <x19/> sends the downloads' connections, and yt-dlp's (and ffmpeg's), through one network adapter, as for <x20/>; when it isn't connected, nothing starts.",
-   "text": "Descargar un vídeo; <x1/> toma un selector de calidad de <x2/> (<x3/> = el mejor archivo único; <x4/> = solo el sonido tal como lo tiene el sitio, sin convertir; <x5/>, <x6/>, <x7/> o <x8/> = el sonido como MP3 a esa tasa de bits, <x9/> a su mejor tasa variable; <x10/> = como Opus; <x11/> = como FLAC, sin pérdidas, pero no mejor que el sonido del sitio; las conversiones necesitan ffmpeg). <x12/>: el propio descargador de MDM trae cada flujo que encuentra yt-dlp a través de esta cantidad de conexiones (8 por defecto, de 1 a 128), un flujo en fragmentos (HLS, DASH) esta cantidad de fragmentos a la vez. <x13/> guarda los subtítulos junto a él: códigos de idioma de <x14/> (<x15/>), o <x16/> para cada uno que el cargador proporcionó; <x17/> toma los subtítulos automáticos del sitio en su lugar; <x18/> los incrusta en el vídeo (necesita ffmpeg, MP4 o MKV). <x19/> envía las conexiones de las descargas, y las de yt-dlp (y ffmpeg), a través de un adaptador de red, como para <x20/>; cuando no está conectado, no se inicia nada."
   },
   "fbc5c79e5fad811f": {
    "source": "<g1>VS Code</g1>: in <x2/>, or <g3>MCP: Add Server</g3> in the command palette:",

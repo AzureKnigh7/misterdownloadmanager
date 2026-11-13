@@ -838,10 +838,6 @@
    "source": "The interface is in every language Windows 11 offers. The catalogs in <g1><x2/></g1> were made by machine translation, and each row marked <x3/> waits for a native speaker:",
    "text": "Інтерфейс доступний усіма мовами, які пропонує Windows 11. Каталоги в <g1><x2/></g1> були створені за допомогою машинного перекладу, і кожен рядок, позначений <x3/>, чекає на носія мови:"
   },
-  "0c4e47b7b5c8f9f5": {
-   "source": "A freeze whose report shows the window thread inside the graphics driver as it shows a frame (<x1/> or <x2/> for Intel, <x3/> for NVIDIA, <x4/> for AMD, under <x5/>) is the driver's OpenGL stuck, not MDM: on Windows, choose <g6>View → Draw with → Direct3D</g6> (the default) and restart MDM, and update the graphics driver. If <g7>Draw with</g7> says Direct3D didn't start there, the line under it says why.",
-   "text": "Зависання, звіт про яке показує потік вікна всередині графічного драйвера під час відображення кадру (<x1/> або <x2/> для Intel, <x3/> для NVIDIA, <x4/> для AMD, під <x5/>), є зависанням OpenGL драйвера, а не MDM: у Windows виберіть <g6>Вигляд → Малювати за допомогою → Direct3D</g6> (за замовчуванням) і перезапустіть MDM, а також оновіть графічний драйвер. Якщо <g7>Малювати за допомогою</g7> вказує, що Direct3D не запустився, рядок під ним пояснює причину."
-  },
   "0c6ce890ecccf13e": {
    "source": "For an internet plan with a data cap, select <g1>Download limits</g1> on the left:",
    "text": "Для тарифного плану з обмеженням даних виберіть <g1>Обмеження завантаження</g1> ліворуч:"
@@ -3450,10 +3446,6 @@
    "source": "Choose the subtitles; tick Put them into the video to keep them inside the file.",
    "text": "Виберіть субтитри; поставте позначку «Вставити у відео», щоб зберегти їх у файлі."
   },
-  "33cd34762a5593c2": {
-   "source": "It takes the video you clicked: its own file when it plays one, or the stream the player loaded (HLS or DASH), else the page. When the button can't tell which one you mean, the toolbar button's <g1>Media on this page</g1> lists them all. Embedded players work too, and your sign-in for the site, the page that embeds the player and your browser's User-Agent go with it, so videos for members, or that play only on the site that embeds them, can be downloaded. Sound players get the button too.",
-   "text": "Він бере відео, на яке ви натиснули: його власний файл, якщо він відтворює його, або потік, завантажений програвачем (HLS або DASH), інакше сторінку. Якщо кнопка не може визначити, що ви маєте на увазі, <g1>Медіа на цій сторінці</g1> на кнопці панелі інструментів перераховує їх усі. Вбудовані програвачі також працюють, і ваш вхід на сайт, сторінка, яка вбудовує програвач, і User-Agent вашого браузера надсилаються разом з ним, тому відео для учасників або ті, що відтворюються лише на сайті, який їх вбудовує, можна завантажити. Звукові програвачі також отримують кнопку."
-  },
   "33e74c2131bce5b0": {
    "source": "Torrents share the cap fairly",
    "text": "Торренти справедливо ділять обмеження"
@@ -3545,10 +3537,6 @@
   "35092e177f7efaa5": {
    "source": "Download complete with Open and Open folder",
    "text": "Завантаження завершено з Відкрити та Відкрити папку"
-  },
-  "3512eeafea5246da": {
-   "source": "<g1>Catching problems.</g1> When MDM crashes (a Windows exception, a signal on Linux, a Mach exception on macOS), panics, or freezes, it asks the monitor for a dump. A freeze is a frame of the window running more than 8 s, seen by a watchdog thread that ignores time spent asleep. It times both parts of a frame: what MDM handles (the commands that come in, the clock of downloads, queues and the Scheduler), which runs minimized too, and the drawing; never the wait between frames. The watchdog also measures how much processor time the window thread got meanwhile, and the report says what that means: it ran all along (a loop), it waited in a lock or on I/O (a deadlock), or it hardly ran in ordinary code, which is a computer too busy to run MDM or slow to load it from disk, most likely not MDM's bug (those share one signature, <x2/>). When the window thread is already back in the event loop by the time the dump is written, the freeze was over before the snapshot, so its stack can't explain it; those reports say so and share the signature <x3/>. macOS doesn't measure it yet. The monitor then writes a <g4>minidump</g4> of every thread from outside, through <x5/> and <x6/>. A crashed process never writes its own dump, which is how Firefox, Crashpad and Sentry do it too.",
-   "text": "<g1>Виявлення проблем.</g1> Коли MDM аварійно завершує роботу (виняток Windows, сигнал на Linux, виняток Mach на macOS), панікує або зависає, він запитує дамп у монітора. Зависання — це кадр вікна, що виконується понад 8 с, виявлений потоком-сторожем, який ігнорує час, проведений у режимі сну. Він вимірює обидві частини кадру: те, що обробляє MDM (вхідні команди, годинник завантажень, черги та Планувальник), що також працює у згорнутому вигляді, і малювання; ніколи не чекає між кадрами. Сторожовий потік також вимірює, скільки часу процесора отримав потік вікна тим часом, і звіт показує, що це означає: він працював весь час (цикл), він чекав у блокуванні або на вхід/вихід (взаємне блокування), або він майже не працював у звичайному коді, що означає, що комп’ютер занадто зайнятий для запуску MDM або повільно завантажує його з диска, швидше за все, це не помилка MDM (вони мають одну сигнатуру, <x2/>). Коли потік вікна вже повернувся до циклу подій до моменту запису дампу, зависання закінчилося до знімка, тому його стек не може це пояснити; такі звіти так і кажуть і мають сигнатуру <x3/>. macOS ще не вимірює це. Потім монітор записує <g4>мінідамп</g4> кожного потоку ззовні, через <x5/> та <x6/>. Аварійно завершений процес ніколи не записує власний дамп, так само роблять Firefox, Crashpad і Sentry."
   },
   "3513f93cb0fa7d72": {
    "source": "<g1>Far</g1> (red): over 150 ms, usually another continent. A far server is often slower, and more connections help it most.",
@@ -4522,6 +4510,10 @@
    "source": "Links that work only once no longer fail with \"403 Forbidden\".",
    "text": "Посилання, які працюють лише один раз, більше не завершуються помилкою «403 Forbidden»."
   },
+  "43510d0cf7beac55": {
+   "source": "<g1>Catching problems.</g1> When MDM crashes (a Windows exception, a signal on Linux, a Mach exception on macOS), panics, or freezes, it asks the monitor for a dump. A freeze is a frame of the window running more than 8 s, seen by a watchdog thread that ignores time spent asleep and the first minute after the computer wakes, while its disk, network and screen come back: a stall then is written to the log, and reported only if it lasts past that minute. It times both parts of a frame: what MDM handles (the commands that come in, the clock of downloads, queues and the Scheduler), which runs minimized too, and the drawing; never the wait between frames. The watchdog also measures how much processor time the window thread got meanwhile, and the report says what that means: it ran all along (a loop), it waited in a lock or on I/O (a deadlock), or it hardly ran in ordinary code, which is a computer too busy to run MDM or slow to load it from disk, most likely not MDM's bug (those share one signature, <x2/>). Each report also names what the frame was doing when it stopped (the tray icon, the downloads' progress, drawing the main window). When the window thread is already back in the event loop, or in the pause after a frame of a hidden window, by the time the dump is written, the freeze was over before the snapshot, so its stack can't explain it; those reports say so and share the signature <x3/>. macOS doesn't measure it yet. The monitor then writes a <g4>minidump</g4> of every thread from outside, through <x5/> and <x6/>. A crashed process never writes its own dump, which is how Firefox, Crashpad and Sentry do it too.",
+   "text": "<g1>Виявлення проблем.</g1> Коли MDM аварійно завершує роботу (виняток Windows, сигнал на Linux, виняток Mach на macOS), панікує або зависає, він запитує дамп у монітора. Зависання — це кадр вікна, що виконується понад 8 секунд, який відстежується потоком-сторожем, що ігнорує час сну та першу хвилину після пробудження комп’ютера, поки його диск, мережа та екран відновлюються: тоді зависання записується в журнал і повідомляється лише, якщо воно триває довше цієї хвилини. Він вимірює обидві частини кадру: те, що обробляє MDM (вхідні команди, годинник завантажень, черги та Планувальник), що також працює у згорнутому вигляді, і малювання; ніколи не чекає між кадрами. Сторожовий потік також вимірює, скільки часу процесора отримав потік вікна тим часом, і звіт вказує, що це означає: він працював весь час (цикл), він чекав у блокуванні або на введенні/виведенні (взаємне блокування), або він майже не працював у звичайному коді, що означає, що комп’ютер занадто зайнятий, щоб запустити MDM, або повільно завантажує його з диска, швидше за все, це не помилка MDM (вони мають одну сигнатуру, <x2/>). Кожен звіт також вказує, що робив кадр, коли він зупинився (піктограма в треї, прогрес завантажень, малювання головного вікна). Коли потік вікна вже повернувся до циклу подій або до паузи після кадру прихованого вікна, до моменту запису дампу, зависання закінчилося до знімка, тому його стек не може це пояснити; ці звіти так і кажуть і мають сигнатуру <x3/>. macOS ще не вимірює це. Потім монітор записує <g4>мінідамп</g4> кожного потоку ззовні, через <x5/> та <x6/>. Аварійно завершений процес ніколи не записує свій власний дамп, так само роблять Firefox, Crashpad та Sentry."
+  },
   "436bac2c4f3d3f4c": {
    "source": "<g1>Downloads → Start queue</g1> and <g2>Downloads → Stop queue</g2> list them too.",
    "text": "У меню <g1>Завантаження → Запустити чергу</g1> та <g2>Завантаження → Зупинити чергу</g2> також можна вибрати чергу."
@@ -4577,6 +4569,10 @@
   "4447a34a8cbe1ae6": {
    "source": "<g1>The Categories pane and the menus</g1> (<g2>#113</g2>): the pane reads as a tree (each category named with its count, open or shut, selected), the menu bar and every right-click menu as menus whose items can be run, and <g3>Shift+F10</g3> or the <g4>Menu</g4> key opens the selected category's menu. A menu opened from the keyboard no longer stays invisible until the mouse moves.",
    "text": "<g1>Панель «Категорії» та меню</g1> (<g2>#113</g2>): панель читається як дерево (кожна категорія названа з її кількістю, відкрита або закрита, вибрана), рядок меню та кожне контекстне меню — як меню, елементи яких можна запускати, а <g3>Shift+F10</g3> або клавіша <g4>Меню</g4> відкриває меню вибраної категорії. Меню, відкрите з клавіатури, більше не залишається невидимим, доки не рухається миша."
+  },
+  "44502a7e800ed659": {
+   "source": "A torrent stopped by one of these says so in its event log, and isn't shared again when MDM starts. Raise or turn off the limit to share it again. - <g1>Limit uploading for all torrents to</g1> — off by default. Caps what all your torrents together send to other peers, while they download and while they share. A torrent's own upload limit, in its progress window, applies on top of it. - <g2>Open magnet links and .torrent files with Mister Download Manager</g2> — Windows then opens magnet links in your browser and <x3/> files in Explorer with MDM. This is for your Windows account only; a program you chose in Windows' <g4>Open with</g4> stays first. The setup can turn it on for you. On Linux it makes MDM your desktop's default app for them; on macOS, their default app (Finder offers MDM in <g5>Open With</g5> for <x6/> files either way, and a double-click opens them in MDM when no other app is their default).",
+   "text": "Торент, зупинений одним із цих обмежень, зазначає це у своєму журналі подій і не поширюється знову під час запуску MDM. Збільште або вимкніть обмеження, щоб знову поширити його. - <g1>Обмежити надсилання для всіх торентів до</g1> — вимкнено за замовчуванням. Обмежує те, що всі ваші торенти разом надсилають іншим учасникам, поки вони завантажуються та поки вони поширюються. Власне обмеження надсилання торента, у вікні його прогресу, застосовується поверх цього. - <g2>Відкривати магніт-посилання та файли .torrent за допомогою Mister Download Manager</g2> — тоді Windows відкриває магніт-посилання у вашому браузері та файли <x3/> у Провіднику за допомогою MDM. Це стосується лише вашого облікового запису Windows; програма, яку ви вибрали у Windows <g4>Відкрити за допомогою</g4>, залишається першою. Налаштування може ввімкнути це для вас. У Linux це робить MDM програмою за замовчуванням для них на вашому робочому столі; у macOS — їхньою програмою за замовчуванням (Finder пропонує MDM у <g5>Відкрити за допомогою</g5> для файлів <x6/> у будь-якому випадку, і подвійне клацання відкриває їх у MDM, якщо жодна інша програма не є їхньою програмою за замовчуванням)."
   },
   "445e6378c12f1e16": {
    "source": "<g1>Image gallery support:</g1> download whole galleries (Flickr, Imgur, DeviantArt and more) with gallery-dl.",
@@ -4798,6 +4794,10 @@
    "source": "The extension now installs from your browser's store, updates itself, and catches more of what you download.",
    "text": "Розширення тепер встановлюється з магазину вашого браузера, оновлюється самостійно та перехоплює більше ваших завантажень."
   },
+  "483cd37a4558c14a": {
+   "source": "If neither can start, MDM draws with a software renderer (Microsoft's on Windows, Mesa's on Linux), so the window still opens (Remote Desktop, a virtual machine without a graphics driver). It works, but keeps the processor busier while a window changes.",
+   "text": "Якщо жоден з них не може запуститися, MDM малює за допомогою програмного рендерера (Microsoft на Windows, Mesa на Linux), тому вікно все одно відкривається (віддалений робочий стіл, віртуальна машина без графічного драйвера). Це працює, але процесор залишається більш завантаженим, поки вікно змінюється."
+  },
   "487a0af4191d3496": {
    "source": "<g1><g2>Its site says so</g2></g1><g3>its site says</g3>",
    "text": "<g1><g2>Його сайт так каже</g2></g1><g3>його сайт каже</g3>"
@@ -4925,10 +4925,6 @@
   "4a575d95633d11ec": {
    "source": "Free Download Manager",
    "text": "Free Download Manager"
-  },
-  "4a68031b1da16fe4": {
-   "source": "Right-click a link, a video, a sound or a picture and choose <g1>Download with Mister Download Manager</g1>. MDM downloads it whatever its type: you asked for it, so the file types list and the excluded sites don't apply here (they only decide which downloads MDM takes over by itself). A video that plays as a stream goes to the <g2>Download video</g2> window with the stream its player loaded (HLS or DASH), as the <g3>button over videos</g3> sends it, with your cookies for the stream's server and the page as the referrer.",
-   "text": "Клацніть правою кнопкою миші посилання, відео, аудіо чи зображення й виберіть <g1>Завантажити за допомогою Mister Download Manager</g1>. MDM завантажить файл незалежно від його типу: оскільки ви самі дали цю команду, список типів файлів і список виключених сайтів не застосовуються (вони визначають лише те, які завантаження MDM перехоплює автоматично). Якщо відео відтворюється як потік, відкриється вікно <g2>Завантажити відео</g2> з потоком, який завантажив програвач (HLS або DASH), так само як і під час натискання <g3>кнопки над відео</g3>. Разом із ним передаються файли cookie для сервера потоку та сторінка як джерело переходу."
   },
   "4a736a6235625512": {
    "source": "Connections and resuming in detail →",
@@ -6762,10 +6758,6 @@
    "source": "The video download button moves to a free corner instead of covering a control of the page, such as a thumbnail's watch-later button (<g1>#421</g1>). Dragging it still puts it where you want it.",
    "text": "Кнопка завантаження відео переміщується у вільний кут замість того, щоб закривати елемент керування сторінки, наприклад, кнопку «дивитися пізніше» мініатюри (<g1>#421</g1>). Перетягування все ще розміщує її там, де ви хочете."
   },
-  "65da44cc551abd0f": {
-   "source": "<g1>Download complete</g1> shows the file's size, its address and where it was saved. Choose <g2>Open</g2>, <g3>Open with...</g3>, <g4>Open folder</g4> or <g5>Close</g5>. On Windows you can also drag the small box at the bottom right into Explorer, an email or a chat to drop the file there. The window shows above your other programs until you click it, without taking the keyboard from the one you're typing in.",
-   "text": "<g1>Завантаження завершено</g1> показує розмір файлу, його адресу та місце збереження. Виберіть <g2>Відкрити</g2>, <g3>Відкрити за допомогою...</g3>, <g4>Відкрити папку</g4> або <g5>Закрити</g5>. У Windows ви також можете перетягнути маленьке віконце внизу праворуч в Провідник, електронний лист або чат, щоб скинути файл туди. Вікно відображається над іншими програмами, доки ви не клацнете на ньому, не забираючи клавіатуру від тієї, в якій ви друкуєте."
-  },
   "662e8cdda4078826": {
    "source": "32 MiB, one connection in three crawls at 128 KB/s",
    "text": "32 МіБ, одне з’єднання в кожному з трьох обходів зі швидкістю 128 КБ/с"
@@ -7005,6 +6997,10 @@
   "6a3e3e5c75482fe1": {
    "source": "Contribute — Mister Download Manager",
    "text": "Зробити внесок — Mister Download Manager"
+  },
+  "6a404128afe84a22": {
+   "source": "A freeze whose report shows the window thread inside the graphics driver as it shows a frame (<x1/> or <x2/> for Intel, <x3/> for NVIDIA, <x4/> for AMD, under <x5/>) is the driver's OpenGL stuck, not MDM: on Windows, choose <g6>View → Draw with → Direct3D</g6> (the default) and restart MDM, and update the graphics driver. If <g7>Draw with</g7> says Direct3D didn't start there, the line under it says why; MDM then remembers the freeze and draws with WARP from the next start.",
+   "text": "Зависання, звіт про яке показує потік вікна всередині графічного драйвера під час відображення кадру (<x1/> або <x2/> для Intel, <x3/> для NVIDIA, <x4/> для AMD, під <x5/>), є зависанням OpenGL драйвера, а не MDM: на Windows виберіть <g6>Вигляд → Малювати за допомогою → Direct3D</g6> (за замовчуванням) і перезапустіть MDM, а також оновіть графічний драйвер. Якщо <g7>Малювати за допомогою</g7> вказує, що Direct3D не запустився, рядок під ним пояснює причину; MDM тоді запам'ятовує зависання і малює за допомогою WARP з наступного запуску."
   },
   "6a658020a3c19e30": {
    "source": "Other systems and files",
@@ -7842,10 +7838,6 @@
    "source": "From top to bottom:",
    "text": "Згори вниз:"
   },
-  "76e8fe34285e22ca": {
-   "source": "Turn the look-ups off in <g1>Options → Archives → Look links up when they arrive</g1>. Some file hosts count a look-up as a download.",
-   "text": "Вимкніть пошук у <g1>Параметри → Архіви → Шукати посилання, коли вони надходять</g1>. Деякі файлові хости вважають пошук завантаженням."
-  },
   "7704f35f9d60deac": {
    "source": "Our benchmark, replayed: the same PC, the same test server, the median of alternating runs.",
    "text": "Наш тест, відтворений: той самий ПК, той самий тестовий сервер, медіана чергування запусків."
@@ -8037,10 +8029,6 @@
   "7a31f6dd87f98452": {
    "source": "<g1>The window no longer freezes when the system's sleep or keychain service is slow</g1> (follows <g2>#222</g2>): a queue set to <g3>Wake the computer to run this queue</g3> asks the system to keep the computer awake while it runs. On Linux that is logind, which can be slow to answer just after the computer wakes, exactly when such a queue starts, and MDM waited for it on the window's own thread (asking again every 5 seconds while it refused). It is now asked in the background, on every system; the queue's downloads, retries and log lines are the same. A keyring that doesn't answer at start (a stopped GNOME Keyring) is now waited for once, at most 5 seconds, instead of once per saved password, and saving the list no longer asks it at all. On Linux the check for a tray to hide windows in, and in Download File Info the check that <g4>Save As</g4> isn't a folder (slow on a network share that doesn't answer), no longer run on the window's thread on every frame.",
    "text": "<g1>Вікно більше не зависає, коли служба сну або зв'язки ключів системи працює повільно</g1> (продовження <g2>#222</g2>): черга, налаштована на <g3>Розбудити комп’ютер для запуску цієї черги</g3>, просить систему тримати комп'ютер активним під час її виконання. На Linux це logind, який може повільно відповідати одразу після пробудження комп'ютера, саме тоді, коли така черга запускається, і MDM чекав на нього у власному потоці вікна (запитуючи знову кожні 5 секунд, якщо він відмовлявся). Тепер запит виконується у фоновому режимі на кожній системі; завантаження, повторні спроби та записи в журналі черги залишаються незмінними. На сховище ключів, яке не відповідає під час запуску (зупинений GNOME Keyring), тепер чекають один раз, максимум 5 секунд, замість одного разу на кожен збережений пароль, а збереження списку більше взагалі не запитує його. На Linux перевірка наявності системного трея для приховування вікон, а також у вікні «Інформація про файл завантаження» перевірка, що <g4>Зберегти як</g4> не є папкою (повільно на мережевому ресурсі, який не відповідає), більше не виконуються в потоці вікна на кожному кадрі."
-  },
-  "7a431c024b9ed18e": {
-   "source": "Choose <g1>Subtitles</g1> if you want them (see below).",
-   "text": "Виберіть <g1>Субтитри</g1>, якщо вони вам потрібні (див. нижче)."
   },
   "7a5b7ab31d5f22cb": {
    "source": "Click <g1>Add Torrent</g1> on the toolbar to open a <x2/> file, or use the arrow next to it for <g3>Add magnet link...</g3>. A magnet link pasted into <g4>Add URL</g4> works too. Torrents land in the same list as your other downloads, marked <g5>Torrent</g5> in the <g6>Source</g6> column, and go into queues and the Scheduler like them.",
@@ -9238,10 +9226,6 @@
    "source": "<g1>Themes</g1><g2>Nine looks, light and dark, from Classic to Aqua, or your own in a text file.</g2>",
    "text": "<g1>Теми</g1><g2>Дев'ять виглядів, світлі та темні, від Класичної до Aqua, або власна у текстовому файлі.</g2>"
   },
-  "8b93f9dffbe6efdb": {
-   "source": "If Direct3D, Vulkan or Metal can't start on your computer (no driver for it, some virtual machines), or its first window doesn't show within 10 seconds of its own (the time MDM spends loading your list and its icons doesn't count, however slow the computer is just after it starts), MDM draws with OpenGL, and <g1>View → Draw with</g1> says so and why. Choosing it again tries it again at the next start.",
-   "text": "Якщо Direct3D, Vulkan або Metal не можуть запуститися на вашому комп’ютері (немає відповідного драйвера, деякі віртуальні машини) або його перше вікно не з’являється протягом 10 секунд (час, який MDM витрачає на завантаження вашого списку та його піктограм, не враховується, незалежно від того, наскільки повільним є комп’ютер одразу після запуску), MDM малює за допомогою OpenGL, і <g1>Вигляд → Малювати за допомогою</g1> вказує на це та причину. Повторний вибір спробує це знову під час наступного запуску."
-  },
   "8b95ee287644fd4f": {
    "source": "Mister Download Manager's link grabber collects a page's links, sorts them into packages, checks which are online and extracts the archives they bring.",
    "text": "Захоплення посилань Mister Download Manager збирає посилання сторінки, сортує їх у пакети, перевіряє, які з них онлайн, та розпаковує архіви, які вони містять."
@@ -9997,6 +9981,10 @@
   "9757a8b628979f6a": {
    "source": "The list shows each quality with its size, best first, and the sound alone at the end. Check <g1>Save to</g1> and <g2>File name</g2>, then click <g3>Download Now</g3>, or <g4>Later</g4> to put it in the list for later. The video gets its own row and progress window, like any other download.",
    "text": "Список показує кожну якість з її розміром, найкращі спочатку, а лише звук — наприкінці. Перевірте <g1>Зберегти до</g1> та <g2>Ім'я файлу</g2>, потім натисніть <g3>Завантажити зараз</g3> або <g4>Пізніше</g4>, щоб додати його до списку для подальшого завантаження. Відео отримує свій рядок і вікно прогресу, як і будь-яке інше завантаження."
+  },
+  "9763111f0a019af1": {
+   "source": "If Direct3D, Vulkan or Metal can't start on your graphics card (no driver for it, some virtual machines), or its first window doesn't show within 10 seconds of its own (the time MDM spends loading your list and its icons doesn't count, however slow the computer is just after it starts), MDM draws with OpenGL, and <g1>View → Draw with</g1> says so and why. Choosing it again tries it again at the next start.",
+   "text": "Якщо Direct3D, Vulkan або Metal не можуть запуститися на вашій відеокарті (немає драйвера для неї, деякі віртуальні машини), або її перше вікно не з'являється протягом 10 секунд (час, який MDM витрачає на завантаження вашого списку та його іконок, не враховується, незалежно від того, наскільки повільний комп'ютер одразу після запуску), MDM малює за допомогою OpenGL, і <g1>Вигляд → Малювати за допомогою</g1> вказує на це та причину. Повторний вибір цієї опції спробує її знову під час наступного запуску."
   },
   "976e1bc04dee0c02": {
    "source": "Both the address you clicked and the one its redirects led to are checked, so a site you excluded stays excluded even when it sends you to another server. Everything else stays with the browser. Changes in Options reach the browser within a minute; you don't need to restart it.",
@@ -11786,10 +11774,6 @@
    "source": "Keep changes focused and match the code around them. A few rules hold everywhere:",
    "text": "Зберігайте зміни сфокусованими та відповідними навколишньому коду. Кілька правил діють скрізь:"
   },
-  "b1cfb9dac9c38d80": {
-   "source": "Then yt-dlp does what it does after a download: it joins the video and its sound with ffmpeg into one MP4, saves or embeds the subtitles, and converts the sound for an MP3, Opus or FLAC choice.",
-   "text": "Потім yt-dlp робить те, що робить після завантаження: об’єднує відео та його звук за допомогою ffmpeg в один MP4, зберігає або вбудовує субтитри та конвертує звук для вибору MP3, Opus або FLAC."
-  },
   "b1d90b3e9d2a1cd5": {
    "source": "runs unit tests and end-to-end downloads against <x1/> with injected faults (slow, dropped and refused connections, servers without ranges, changing files). <x2/> runs the published speed comparison; its raw data is in <x3/>.",
    "text": "запускає модульні тести та наскрізні завантаження проти <x1/> з впровадженими помилками (повільні, відкинуті та відхилені з'єднання, сервери без діапазонів, файли, що змінюються). <x2/> запускає опубліковане порівняння швидкості; його необроблені дані знаходяться в <x3/>."
@@ -11813,6 +11797,10 @@
   "b2181eccf65e86be": {
    "source": "This <g1>website</g1> counts visits with <g2>Statcounter</g2>, which sets a cookie and sees your IP address; it runs only on the website, never in the app.",
    "text": "Цей <g1>вебсайт</g1> підраховує відвідування за допомогою <g2>Statcounter</g2>, який встановлює файл cookie та бачить вашу IP-адресу; він працює лише на вебсайті, ніколи в програмі."
+  },
+  "b21b0cc3853450de": {
+   "source": "On Windows, when OpenGL fails on a card without Direct3D 12, MDM draws with Direct3D on Microsoft's software renderer (WARP) from the next start, and <g1>View → Draw with</g1> says why: OpenGL couldn't start, it is too old to draw MDM (older than 3.0, such as Intel's first HD Graphics, whose OpenGL 2.1 drew MDM's windows as garbage), its first window didn't show within 10 seconds, or MDM froze inside the graphics driver while OpenGL showed a frame (the older Intel HD Graphics and AMD Radeon cards' drivers did). Choosing <g2>OpenGL</g2> there tries it again.",
+   "text": "На Windows, якщо OpenGL не працює на карті без Direct3D 12, MDM малює за допомогою Direct3D на програмному рендерері Microsoft (WARP) з наступного запуску, і <g1>Вигляд → Малювати за допомогою</g1> вказує причину: OpenGL не зміг запуститися, він занадто старий для малювання MDM (старіший за 3.0, наприклад, перші Intel HD Graphics, чий OpenGL 2.1 малював вікна MDM як сміття), його перше вікно не з'явилося протягом 10 секунд, або MDM завис у графічному драйвері, поки OpenGL показував кадр (драйвери старих Intel HD Graphics та AMD Radeon карт робили це). Вибір <g2>OpenGL</g2> там спробує його знову."
   },
   "b23baab9a4561a1d": {
    "source": "Pauses running downloads.",
@@ -12858,10 +12846,6 @@
    "source": "Choose before you add",
    "text": "Виберіть перед додаванням"
   },
-  "c20a850dfc745632": {
-   "source": "If neither can start, MDM draws with a software renderer (Microsoft's on Windows, Mesa's on Linux), so the window still opens (Remote Desktop, a virtual machine without a graphics driver). It works, but keeps the processor busier.",
-   "text": "Якщо жоден не може запуститися, MDM малює за допомогою програмного рендерера (Microsoft у Windows, Mesa у Linux), тому вікно все одно відкривається (віддалений робочий стіл, віртуальна машина без графічного драйвера). Це працює, але завантажує процесор більше."
-  },
   "c21ae87a328182aa": {
    "source": "<g1>Link grabber</g1><g2>A page's links gathered, sorted into packages and checked online, then the archives unpacked when they arrive.</g2>",
    "text": "<g1>Захоплення посилань</g1><g2>Посилання зі сторінки збираються, сортуються в пакети та перевіряються онлайн, а потім архіви розпаковуються після завантаження.</g2>"
@@ -13397,10 +13381,6 @@
   "ca67cb26c4c8dabb": {
    "source": "View → Theme changes how MDM looks at once and keeps everything where it was. Pick one of the built-in looks, each with a light and a dark side, or make your own in a text file.",
    "text": "Вигляд → Тема миттєво змінює вигляд MDM, зберігаючи все на своїх місцях. Виберіть один із вбудованих стилів, кожен зі світлою та темною стороною, або створіть власний у текстовому файлі."
-  },
-  "ca722db87f0d3bad": {
-   "source": "Last updated 2026-11-12 · applies to the app, the browser extension and misterdownloadmanager.com",
-   "text": "Останнє оновлення 12.11.2026 · стосується програми, розширення для браузера та сайту misterdownloadmanager.com"
   },
   "ca7a6b77fb1e5a3c": {
    "source": "strengthens every edge and text colour on top.",
@@ -15254,10 +15234,6 @@
    "source": "Point at the video in your browser and click the Download video button that appears over it, or paste the page's address into Tasks → Download video from a…",
    "text": "Наведіть курсор на відео у своєму браузері та натисніть кнопку Завантажити відео, що з'явиться над ним, або вставте адресу сторінки в Завдання → Завантажити відео з..."
   },
-  "e7e684a8f8aec6c8": {
-   "source": "<g1>Hide web pages</g1> (on by default) leaves out links to pages (<x2/>, <x3/> and the like): they are neither shown nor downloaded.",
-   "text": "<g1>Приховати вебсторінки</g1> (увімкнено за замовчуванням) виключає посилання на сторінки (<x2/>, <x3/> тощо): вони не відображаються і не завантажуються."
-  },
   "e7f203ecd75caead": {
    "source": "Can my AI assistant use MDM? — Mister Download Manager",
    "text": "Чи може мій ШІ-помічник використовувати MDM? — Mister Download Manager"
@@ -15565,10 +15541,6 @@
   "ec83076f0311f20e": {
    "source": "A theme is one small text file in <g1>TOML</g1> (or JSON, <x2/>; or a <g3>colour scheme</g3>, <x4/>). It names only what it changes; everything else comes from the theme it <x5/>:",
    "text": "Тема — це один невеликий текстовий файл у форматі <g1>TOML</g1> (або JSON, <x2/>; або <g3>кольорова схема</g3>, <x4/>). Він називає лише те, що змінює; все інше походить від теми, яку він <x5/>:"
-  },
-  "ec8dbbc2dc38cd32": {
-   "source": "A torrent stopped by one of these says so in its event log, and isn't shared again when MDM starts. Raise or turn off the limit to share it again. - <g1>Limit uploading for all torrents to</g1> — off by default. Caps what all your torrents together send to other peers, while they download and while they share. A torrent's own upload limit, in its progress window, applies on top of it. - <g2>Open magnet links and .torrent files with Mister Download Manager</g2> — Windows then opens magnet links in your browser and <x3/> files in Explorer with MDM. This is for your Windows account only; a program you chose in Windows' <g4>Open with</g4> stays first. The setup can turn it on for you.",
-   "text": "Торент, зупинений за одним із цих параметрів, згадується в журналі подій і не роздається знову після запуску MDM. Збільште або вимкніть обмеження, щоб знову роздавати його. - <g1>Обмежити надсилання для всіх торентів до</g1> — за замовчуванням вимкнено. Обмежує загальний обсяг даних, які всі ваші торренти надсилають іншим пірам під час завантаження та роздачі. Додатково діє індивідуальне обмеження надсилання торента у вікні перебігу завантаження. - <g2>Відкривати магнітні посилання та файли .torrent за допомогою Mister Download Manager</g2> — тоді Windows відкриватиме магнітні посилання у вашому браузері, а файли <x3/> — у Провіднику за допомогою MDM. Це стосується лише вашого облікового запису Windows; програма, яку ви вибрали в Windows у меню <g4>Відкрити за допомогою</g4>, залишиться пріоритетною. Програма встановлення може ввімкнути цей параметр."
   },
   "ec99486fc82e0b86": {
    "source": "Options",
@@ -16094,10 +16066,6 @@
    "source": "Download File Info",
    "text": "Інформація про файл завантаження"
   },
-  "f385c86abe758db3": {
-   "source": "Last updated 2026-11-12",
-   "text": "Оновлено 12.11.2026"
-  },
   "f3901fedc4a7dd52": {
    "source": "<g1>Browser extension</g1><g2>Downloads you click in Chrome, Edge, Brave, Opera, Vivaldi or Firefox go straight to MDM, sign-in included.</g2>",
    "text": "<g1>Розширення браузера</g1><g2>Завантаження, на які ви натискаєте в Chrome, Edge, Brave, Opera, Vivaldi або Firefox, надходять безпосередньо в MDM, включно з входом у систему.</g2>"
@@ -16376,7 +16344,7 @@
   },
   "f89c54d71eb189a4": {
    "source": "If the graphics card is reset while MDM runs (a driver update), MDM starts again by itself. Lost twice in 10 minutes, it goes back to OpenGL, and <g1>View → Draw with</g1> says why.",
-   "text": "Якщо графічна карта скидається під час роботи MDM (оновлення драйвера), MDM перезапускається сам. Якщо це сталося двічі за 10 хвилин, він повертається до OpenGL, а <g1>Вигляд → Малювати за допомогою</g1> вказує причину."
+   "text": "Якщо відеокарта скидається під час роботи MDM (оновлення драйвера), MDM запускається знову самостійно. Якщо це сталося двічі за 10 хвилин, він повертається до OpenGL, і <g1>Вигляд → Малювати за допомогою</g1> вказує причину."
   },
   "f8b52274ed125d5f": {
    "source": "Tick <g1>Wake the computer to run this queue</g1> and a sleeping computer is woken a minute before the start time, so the network is back when the queue begins. It stays awake while the queue runs; afterwards its own sleep settings apply again. The line under the option says when the next wake is, or why there can't be one.",
@@ -16645,10 +16613,6 @@
   "fbba8f18d2fae06e": {
    "source": "A text box's bottom line while it can be typed in",
    "text": "Нижня лінія текстового поля, коли в нього можна вводити текст"
-  },
-  "fbc41fd4efa0fd9a": {
-   "source": "Download a video; <x1/> takes a quality's selector from <x2/> (<x3/> = the best single file; <x4/> = the sound alone as the site has it, not converted; <x5/>, <x6/>, <x7/> or <x8/> = the sound as an MP3 at that bitrate, <x9/> at its best variable one; <x10/> = as Opus; <x11/> = as FLAC, lossless but no better than the site's sound; conversions need ffmpeg). <x12/>: MDM's own downloader brings each stream yt-dlp finds over this many connections (8 by default, 1 to 128), a stream in pieces (HLS, DASH) this many pieces at once. <x13/> saves subtitles beside it: language codes from <x14/> (<x15/>), or <x16/> for every one the uploader gave; <x17/> takes the site's automatic captions instead; <x18/> puts them into the video (needs ffmpeg, MP4 or MKV). <x19/> sends the downloads' connections, and yt-dlp's (and ffmpeg's), through one network adapter, as for <x20/>; when it isn't connected, nothing starts.",
-   "text": "Завантажити відео; <x1/> вибирає якість із <x2/> (<x3/> = найкращий окремий файл; <x4/> = лише звук, як він є на сайті, без конвертації; <x5/>, <x6/>, <x7/> або <x8/> = звук у форматі MP3 з таким бітрейтом, <x9/> з найкращим змінним бітрейтом; <x10/> = як Opus; <x11/> = як FLAC, без втрат, але не краще, ніж звук із сайту; для конвертації потрібен ffmpeg). <x12/>: власний завантажувач MDM завантажує кожен потік, знайдений yt-dlp, через таку кількість з’єднань (8 за замовчуванням, від 1 до 128), потік частинами (HLS, DASH) такою кількістю частин одночасно. <x13/> зберігає субтитри поруч: коди мов із <x14/> (<x15/>), або <x16/> для всіх, які надав завантажувач; <x17/> використовує автоматичні субтитри сайту; <x18/> вбудовує їх у відео (потрібен ffmpeg, MP4 або MKV). <x19/> надсилає з’єднання для завантажень, а також yt-dlp (і ffmpeg), через один мережевий адаптер, як для <x20/>; якщо він не підключений, нічого не починається."
   },
   "fbc5c79e5fad811f": {
    "source": "<g1>VS Code</g1>: in <x2/>, or <g3>MCP: Add Server</g3> in the command palette:",

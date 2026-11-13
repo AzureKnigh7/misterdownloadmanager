@@ -838,10 +838,6 @@
    "source": "The interface is in every language Windows 11 offers. The catalogs in <g1><x2/></g1> were made by machine translation, and each row marked <x3/> waits for a native speaker:",
    "text": "Antarmuka tersedia dalam setiap bahasa yang ditawarkan Windows 11. Katalog di <g1><x2/></g1> dibuat oleh terjemahan mesin, dan setiap baris yang ditandai <x3/> menunggu penutur asli:"
   },
-  "0c4e47b7b5c8f9f5": {
-   "source": "A freeze whose report shows the window thread inside the graphics driver as it shows a frame (<x1/> or <x2/> for Intel, <x3/> for NVIDIA, <x4/> for AMD, under <x5/>) is the driver's OpenGL stuck, not MDM: on Windows, choose <g6>View → Draw with → Direct3D</g6> (the default) and restart MDM, and update the graphics driver. If <g7>Draw with</g7> says Direct3D didn't start there, the line under it says why.",
-   "text": "Pembekuan yang laporannya menunjukkan thread jendela di dalam driver grafis saat menampilkan frame (<x1/> atau <x2/> untuk Intel, <x3/> untuk NVIDIA, <x4/> untuk AMD, di bawah <x5/>) adalah OpenGL driver yang macet, bukan MDM: di Windows, pilih <g6>Tampilan → Render dengan → Direct3D</g6> (default) dan mulai ulang MDM, lalu perbarui driver grafis. Jika <g7>Render dengan</g7> menyatakan Direct3D tidak dimulai di sana, baris di bawahnya akan menjelaskan alasannya."
-  },
   "0c6ce890ecccf13e": {
    "source": "For an internet plan with a data cap, select <g1>Download limits</g1> on the left:",
    "text": "Untuk paket internet dengan batas data, pilih <g1>Batas unduhan</g1> di sebelah kiri:"
@@ -3450,10 +3446,6 @@
    "source": "Choose the subtitles; tick Put them into the video to keep them inside the file.",
    "text": "Pilih subtitel, lalu centang Masukkan ke dalam video untuk menyimpannya di dalam file."
   },
-  "33cd34762a5593c2": {
-   "source": "It takes the video you clicked: its own file when it plays one, or the stream the player loaded (HLS or DASH), else the page. When the button can't tell which one you mean, the toolbar button's <g1>Media on this page</g1> lists them all. Embedded players work too, and your sign-in for the site, the page that embeds the player and your browser's User-Agent go with it, so videos for members, or that play only on the site that embeds them, can be downloaded. Sound players get the button too.",
-   "text": "Tombol ini mengambil video yang Anda klik: file-nya sendiri jika memutar file, atau stream yang dimuat pemutar (HLS atau DASH), atau halaman tersebut. Jika tombol tidak dapat menentukan mana yang Anda maksud, tombol bilah alat <g1>Media di halaman ini</g1> akan mencantumkan semuanya. Pemutar tersemat juga berfungsi, dan login Anda untuk situs tersebut, halaman yang menyematkan pemutar, serta User-Agent browser Anda akan ikut disertakan, sehingga video untuk anggota, atau yang hanya diputar di situs yang menyematkannya, dapat diunduh. Pemutar suara juga mendapatkan tombol ini."
-  },
   "33e74c2131bce5b0": {
    "source": "Torrents share the cap fairly",
    "text": "Torrent berbagi batasan secara adil"
@@ -3545,10 +3537,6 @@
   "35092e177f7efaa5": {
    "source": "Download complete with Open and Open folder",
    "text": "Unduhan selesai dengan Buka dan Buka folder"
-  },
-  "3512eeafea5246da": {
-   "source": "<g1>Catching problems.</g1> When MDM crashes (a Windows exception, a signal on Linux, a Mach exception on macOS), panics, or freezes, it asks the monitor for a dump. A freeze is a frame of the window running more than 8 s, seen by a watchdog thread that ignores time spent asleep. It times both parts of a frame: what MDM handles (the commands that come in, the clock of downloads, queues and the Scheduler), which runs minimized too, and the drawing; never the wait between frames. The watchdog also measures how much processor time the window thread got meanwhile, and the report says what that means: it ran all along (a loop), it waited in a lock or on I/O (a deadlock), or it hardly ran in ordinary code, which is a computer too busy to run MDM or slow to load it from disk, most likely not MDM's bug (those share one signature, <x2/>). When the window thread is already back in the event loop by the time the dump is written, the freeze was over before the snapshot, so its stack can't explain it; those reports say so and share the signature <x3/>. macOS doesn't measure it yet. The monitor then writes a <g4>minidump</g4> of every thread from outside, through <x5/> and <x6/>. A crashed process never writes its own dump, which is how Firefox, Crashpad and Sentry do it too.",
-   "text": "<g1>Menangkap masalah.</g1> Saat MDM mengalami crash (pengecualian Windows, sinyal di Linux, pengecualian Mach di macOS), panik, atau macet, ia meminta dump dari monitor. Macet adalah bingkai jendela yang berjalan lebih dari 8 detik, dilihat oleh thread pengawas yang mengabaikan waktu tidur. Ini menghitung waktu kedua bagian dari bingkai: apa yang ditangani MDM (perintah yang masuk, jam unduhan, antrean, dan Penjadwal), yang juga berjalan diminimalkan, dan penggambaran; tidak pernah menunggu di antara bingkai. Pengawas juga mengukur berapa banyak waktu prosesor yang didapat thread jendela sementara itu, dan laporan tersebut mengatakan apa artinya: ia berjalan terus-menerus (loop), ia menunggu dalam kunci atau pada I/O (deadlock), atau ia hampir tidak berjalan dalam kode biasa, yang berarti komputer terlalu sibuk untuk menjalankan MDM atau lambat memuatnya dari disk, kemungkinan besar bukan bug MDM (ini berbagi satu tanda tangan, <x2/>). Saat thread jendela sudah kembali ke event loop pada saat dump ditulis, kemacetan sudah berakhir sebelum snapshot, jadi stack-nya tidak dapat menjelaskannya; laporan tersebut mengatakan demikian dan berbagi tanda tangan <x3/>. macOS belum mengukurnya. Monitor kemudian menulis <g4>minidump</g4> dari setiap thread dari luar, melalui <x5/> dan <x6/>. Proses yang crash tidak pernah menulis dump-nya sendiri, seperti yang dilakukan Firefox, Crashpad, dan Sentry juga."
   },
   "3513f93cb0fa7d72": {
    "source": "<g1>Far</g1> (red): over 150 ms, usually another continent. A far server is often slower, and more connections help it most.",
@@ -4522,6 +4510,10 @@
    "source": "Links that work only once no longer fail with \"403 Forbidden\".",
    "text": "Tautan yang hanya berfungsi sekali tidak lagi gagal dengan \"403 Forbidden\"."
   },
+  "43510d0cf7beac55": {
+   "source": "<g1>Catching problems.</g1> When MDM crashes (a Windows exception, a signal on Linux, a Mach exception on macOS), panics, or freezes, it asks the monitor for a dump. A freeze is a frame of the window running more than 8 s, seen by a watchdog thread that ignores time spent asleep and the first minute after the computer wakes, while its disk, network and screen come back: a stall then is written to the log, and reported only if it lasts past that minute. It times both parts of a frame: what MDM handles (the commands that come in, the clock of downloads, queues and the Scheduler), which runs minimized too, and the drawing; never the wait between frames. The watchdog also measures how much processor time the window thread got meanwhile, and the report says what that means: it ran all along (a loop), it waited in a lock or on I/O (a deadlock), or it hardly ran in ordinary code, which is a computer too busy to run MDM or slow to load it from disk, most likely not MDM's bug (those share one signature, <x2/>). Each report also names what the frame was doing when it stopped (the tray icon, the downloads' progress, drawing the main window). When the window thread is already back in the event loop, or in the pause after a frame of a hidden window, by the time the dump is written, the freeze was over before the snapshot, so its stack can't explain it; those reports say so and share the signature <x3/>. macOS doesn't measure it yet. The monitor then writes a <g4>minidump</g4> of every thread from outside, through <x5/> and <x6/>. A crashed process never writes its own dump, which is how Firefox, Crashpad and Sentry do it too.",
+   "text": "<g1>Mendeteksi masalah.</g1> Saat MDM mengalami crash (pengecualian Windows, sinyal di Linux, pengecualian Mach di macOS), panik, atau macet, MDM meminta dump dari monitor. Macet adalah ketika jendela berjalan lebih dari 8 detik, yang terdeteksi oleh thread pengawas yang mengabaikan waktu tidur dan menit pertama setelah komputer bangun, sementara disk, jaringan, dan layarnya kembali berfungsi: kemacetan kemudian ditulis ke log, dan dilaporkan hanya jika berlangsung melewati menit tersebut. Ini mengukur kedua bagian dari sebuah bingkai: apa yang ditangani MDM (perintah yang masuk, jam unduhan, antrean, dan Penjadwal), yang juga berjalan saat diminimalkan, dan penggambaran; tidak pernah menunggu di antara bingkai. Pengawas juga mengukur berapa banyak waktu prosesor yang didapatkan thread jendela sementara itu, dan laporan tersebut menyatakan artinya: ia berjalan terus-menerus (loop), ia menunggu dalam kunci atau pada I/O (deadlock), atau ia hampir tidak berjalan dalam kode biasa, yang berarti komputer terlalu sibuk untuk menjalankan MDM atau lambat memuatnya dari disk, kemungkinan besar bukan bug MDM (ini berbagi satu tanda tangan, <x2/>). Setiap laporan juga menyebutkan apa yang sedang dilakukan bingkai saat berhenti (ikon baki, kemajuan unduhan, menggambar jendela utama). Ketika thread jendela sudah kembali ke loop peristiwa, atau dalam jeda setelah bingkai jendela tersembunyi, pada saat dump ditulis, kemacetan sudah berakhir sebelum snapshot, sehingga tumpukannya tidak dapat menjelaskannya; laporan tersebut menyatakan demikian dan berbagi tanda tangan <x3/>. macOS belum mengukurnya. Monitor kemudian menulis <g4>minidump</g4> dari setiap thread dari luar, melalui <x5/> dan <x6/>. Proses yang crash tidak pernah menulis dump-nya sendiri, seperti yang dilakukan Firefox, Crashpad, dan Sentry."
+  },
   "436bac2c4f3d3f4c": {
    "source": "<g1>Downloads → Start queue</g1> and <g2>Downloads → Stop queue</g2> list them too.",
    "text": "<g1>Unduhan → Mulai antrean</g1> dan <g2>Unduhan → Hentikan antrean</g2> juga mencantumkannya."
@@ -4577,6 +4569,10 @@
   "4447a34a8cbe1ae6": {
    "source": "<g1>The Categories pane and the menus</g1> (<g2>#113</g2>): the pane reads as a tree (each category named with its count, open or shut, selected), the menu bar and every right-click menu as menus whose items can be run, and <g3>Shift+F10</g3> or the <g4>Menu</g4> key opens the selected category's menu. A menu opened from the keyboard no longer stays invisible until the mouse moves.",
    "text": "<g1>Panel Kategori dan menu</g1> (<g2>#113</g2>): panel dibaca sebagai pohon (setiap kategori diberi nama dengan jumlahnya, terbuka atau tertutup, dipilih), bilah menu dan setiap menu klik kanan sebagai menu yang itemnya dapat dijalankan, dan <g3>Shift+F10</g3> atau tombol <g4>Menu</g4> membuka menu kategori yang dipilih. Menu yang dibuka dari keyboard tidak lagi tetap tidak terlihat sampai mouse bergerak."
+  },
+  "44502a7e800ed659": {
+   "source": "A torrent stopped by one of these says so in its event log, and isn't shared again when MDM starts. Raise or turn off the limit to share it again. - <g1>Limit uploading for all torrents to</g1> — off by default. Caps what all your torrents together send to other peers, while they download and while they share. A torrent's own upload limit, in its progress window, applies on top of it. - <g2>Open magnet links and .torrent files with Mister Download Manager</g2> — Windows then opens magnet links in your browser and <x3/> files in Explorer with MDM. This is for your Windows account only; a program you chose in Windows' <g4>Open with</g4> stays first. The setup can turn it on for you. On Linux it makes MDM your desktop's default app for them; on macOS, their default app (Finder offers MDM in <g5>Open With</g5> for <x6/> files either way, and a double-click opens them in MDM when no other app is their default).",
+   "text": "Torrent yang dihentikan oleh salah satu pengaturan ini akan tercatat di log peristiwa, dan tidak akan dibagikan lagi saat MDM dimulai. Tingkatkan atau matikan batasnya untuk membagikannya lagi. - <g1>Batasi kecepatan unggah semua torrent hingga</g1> — mati secara default. Membatasi total kecepatan unggah semua torrent Anda ke peer lain, baik saat mengunduh maupun saat berbagi. Batas unggah torrent itu sendiri, di jendela progresnya, berlaku di atas batas ini. - <g2>Buka tautan magnet dan file .torrent dengan Mister Download Manager</g2> — Windows kemudian akan membuka tautan magnet di browser Anda dan file <x3/> di Explorer dengan MDM. Ini hanya untuk akun Windows Anda; program yang Anda pilih di <g4>Buka dengan</g4> Windows tetap menjadi yang utama. Pengaturan dapat mengaktifkannya untuk Anda. Di Linux, ini menjadikan MDM aplikasi default desktop Anda untuk tautan dan file tersebut; di macOS, aplikasi defaultnya (Finder menawarkan MDM di <g5>Buka Dengan</g5> untuk file <x6/> dalam kedua kasus, dan klik ganda akan membukanya di MDM jika tidak ada aplikasi lain yang menjadi defaultnya)."
   },
   "445e6378c12f1e16": {
    "source": "<g1>Image gallery support:</g1> download whole galleries (Flickr, Imgur, DeviantArt and more) with gallery-dl.",
@@ -4798,6 +4794,10 @@
    "source": "The extension now installs from your browser's store, updates itself, and catches more of what you download.",
    "text": "Ekstensi kini diinstal dari toko peramban Anda, memperbarui diri, dan menangkap lebih banyak unduhan Anda."
   },
+  "483cd37a4558c14a": {
+   "source": "If neither can start, MDM draws with a software renderer (Microsoft's on Windows, Mesa's on Linux), so the window still opens (Remote Desktop, a virtual machine without a graphics driver). It works, but keeps the processor busier while a window changes.",
+   "text": "Jika keduanya tidak dapat dimulai, MDM akan merender dengan perender perangkat lunak (milik Microsoft di Windows, milik Mesa di Linux), sehingga jendela tetap terbuka (Remote Desktop, mesin virtual tanpa driver grafis). Ini berfungsi, tetapi membuat prosesor lebih sibuk saat jendela berubah."
+  },
   "487a0af4191d3496": {
    "source": "<g1><g2>Its site says so</g2></g1><g3>its site says</g3>",
    "text": "<g1><g2>Situsnya mengatakan demikian</g2></g1><g3>situsnya mengatakan</g3>"
@@ -4925,10 +4925,6 @@
   "4a575d95633d11ec": {
    "source": "Free Download Manager",
    "text": "Free Download Manager"
-  },
-  "4a68031b1da16fe4": {
-   "source": "Right-click a link, a video, a sound or a picture and choose <g1>Download with Mister Download Manager</g1>. MDM downloads it whatever its type: you asked for it, so the file types list and the excluded sites don't apply here (they only decide which downloads MDM takes over by itself). A video that plays as a stream goes to the <g2>Download video</g2> window with the stream its player loaded (HLS or DASH), as the <g3>button over videos</g3> sends it, with your cookies for the stream's server and the page as the referrer.",
-   "text": "Klik kanan tautan, video, suara, atau gambar, lalu pilih <g1>Unduh dengan Mister Download Manager</g1>. MDM akan mengunduhnya apa pun jenisnya: Anda memintanya, jadi daftar jenis file dan situs yang dikecualikan tidak berlaku di sini (keduanya hanya menentukan unduhan mana yang diambil alih MDM secara otomatis). Video yang diputar sebagai aliran akan masuk ke jendela <g2>Unduh video</g2> dengan aliran yang dimuat pemutarnya (HLS atau DASH), seperti yang dikirim oleh <g3>tombol di atas video</g3>, dengan cookie Anda untuk server aliran dan halaman sebagai perujuk."
   },
   "4a736a6235625512": {
    "source": "Connections and resuming in detail →",
@@ -6762,10 +6758,6 @@
    "source": "The video download button moves to a free corner instead of covering a control of the page, such as a thumbnail's watch-later button (<g1>#421</g1>). Dragging it still puts it where you want it.",
    "text": "Tombol unduh video bergerak ke sudut bebas alih-alih menutupi kontrol halaman, seperti tombol tonton nanti pada thumbnail (<g1>#421</g1>). Menyeretnya masih menempatkannya di tempat yang Anda inginkan."
   },
-  "65da44cc551abd0f": {
-   "source": "<g1>Download complete</g1> shows the file's size, its address and where it was saved. Choose <g2>Open</g2>, <g3>Open with...</g3>, <g4>Open folder</g4> or <g5>Close</g5>. On Windows you can also drag the small box at the bottom right into Explorer, an email or a chat to drop the file there. The window shows above your other programs until you click it, without taking the keyboard from the one you're typing in.",
-   "text": "<g1>Unduhan selesai</g1> menampilkan ukuran file, alamatnya, dan lokasi penyimpanannya. Pilih <g2>Buka</g2>, <g3>Buka dengan...</g3>, <g4>Buka folder</g4>, atau <g5>Tutup</g5>. Di Windows, Anda juga bisa menyeret kotak kecil di kanan bawah ke Explorer, email, atau obrolan untuk menempatkan file di sana. Jendela ini akan tetap berada di atas program lain sampai Anda mengekliknya, tanpa mengalihkan keyboard dari program yang sedang Anda gunakan."
-  },
   "662e8cdda4078826": {
    "source": "32 MiB, one connection in three crawls at 128 KB/s",
    "text": "32 MiB, satu koneksi dalam tiga perayapan pada 128 KB/dtk"
@@ -7005,6 +6997,10 @@
   "6a3e3e5c75482fe1": {
    "source": "Contribute — Mister Download Manager",
    "text": "Kontribusi — Mister Download Manager"
+  },
+  "6a404128afe84a22": {
+   "source": "A freeze whose report shows the window thread inside the graphics driver as it shows a frame (<x1/> or <x2/> for Intel, <x3/> for NVIDIA, <x4/> for AMD, under <x5/>) is the driver's OpenGL stuck, not MDM: on Windows, choose <g6>View → Draw with → Direct3D</g6> (the default) and restart MDM, and update the graphics driver. If <g7>Draw with</g7> says Direct3D didn't start there, the line under it says why; MDM then remembers the freeze and draws with WARP from the next start.",
+   "text": "Pembekuan yang laporannya menunjukkan utas jendela di dalam driver grafis saat menampilkan bingkai (<x1/> atau <x2/> untuk Intel, <x3/> untuk NVIDIA, <x4/> untuk AMD, di bawah <x5/>) adalah OpenGL driver yang macet, bukan MDM: di Windows, pilih <g6>Tampilan → Render dengan → Direct3D</g6> (default) dan mulai ulang MDM, serta perbarui driver grafis. Jika <g7>Render dengan</g7> menyatakan Direct3D tidak dimulai di sana, baris di bawahnya akan menyatakan alasannya; MDM kemudian mengingat pembekuan tersebut dan merender dengan WARP mulai dari awal berikutnya."
   },
   "6a658020a3c19e30": {
    "source": "Other systems and files",
@@ -7842,10 +7838,6 @@
    "source": "From top to bottom:",
    "text": "Dari atas ke bawah:"
   },
-  "76e8fe34285e22ca": {
-   "source": "Turn the look-ups off in <g1>Options → Archives → Look links up when they arrive</g1>. Some file hosts count a look-up as a download.",
-   "text": "Matikan pemeriksaan tautan di <g1>Opsi → Arsip → Periksa tautan saat tiba</g1>. Beberapa layanan hosting file menghitung pemeriksaan tautan sebagai unduhan."
-  },
   "7704f35f9d60deac": {
    "source": "Our benchmark, replayed: the same PC, the same test server, the median of alternating runs.",
    "text": "Tolok ukur kami, diuji ulang: PC yang sama, server uji yang sama, median dari pengujian yang dilakukan bergantian."
@@ -8037,10 +8029,6 @@
   "7a31f6dd87f98452": {
    "source": "<g1>The window no longer freezes when the system's sleep or keychain service is slow</g1> (follows <g2>#222</g2>): a queue set to <g3>Wake the computer to run this queue</g3> asks the system to keep the computer awake while it runs. On Linux that is logind, which can be slow to answer just after the computer wakes, exactly when such a queue starts, and MDM waited for it on the window's own thread (asking again every 5 seconds while it refused). It is now asked in the background, on every system; the queue's downloads, retries and log lines are the same. A keyring that doesn't answer at start (a stopped GNOME Keyring) is now waited for once, at most 5 seconds, instead of once per saved password, and saving the list no longer asks it at all. On Linux the check for a tray to hide windows in, and in Download File Info the check that <g4>Save As</g4> isn't a folder (slow on a network share that doesn't answer), no longer run on the window's thread on every frame.",
    "text": "<g1>Jendela tidak lagi membeku saat layanan tidur atau rantai kunci sistem lambat</g1> (mengikuti <g2>#222</g2>): antrean yang diatur ke <g3>Bangunkan komputer untuk menjalankan antrean ini</g3> meminta sistem untuk menjaga komputer tetap aktif saat berjalan. Di Linux itu adalah logind, yang bisa lambat menjawab tepat setelah komputer bangun, persis saat antrean seperti itu dimulai, dan MDM menunggunya di utas jendela itu sendiri (bertanya lagi setiap 5 detik saat menolak). Sekarang diminta di latar belakang, di setiap sistem; unduhan, percobaan ulang, dan baris log antrean sama. Rantai kunci yang tidak menjawab saat dimulai (GNOME Keyring yang berhenti) sekarang ditunggu sekali, paling lama 5 detik, alih-alih sekali per kata sandi yang disimpan, dan menyimpan daftar tidak lagi memintanya sama sekali. Di Linux, pemeriksaan untuk baki untuk menyembunyikan jendela, dan di “Info file unduhan” pemeriksaan bahwa <g4>Simpan Sebagai</g4> bukan folder (lambat di berbagi jaringan yang tidak menjawab), tidak lagi berjalan di utas jendela di setiap bingkai."
-  },
-  "7a431c024b9ed18e": {
-   "source": "Choose <g1>Subtitles</g1> if you want them (see below).",
-   "text": "Pilih <g1>Subtitel</g1> jika Anda menginginkannya (lihat di bawah)."
   },
   "7a5b7ab31d5f22cb": {
    "source": "Click <g1>Add Torrent</g1> on the toolbar to open a <x2/> file, or use the arrow next to it for <g3>Add magnet link...</g3>. A magnet link pasted into <g4>Add URL</g4> works too. Torrents land in the same list as your other downloads, marked <g5>Torrent</g5> in the <g6>Source</g6> column, and go into queues and the Scheduler like them.",
@@ -9238,10 +9226,6 @@
    "source": "<g1>Themes</g1><g2>Nine looks, light and dark, from Classic to Aqua, or your own in a text file.</g2>",
    "text": "<g1>Tema</g1><g2>Sembilan tampilan, terang dan gelap, dari Klasik hingga Aqua, atau milik Anda sendiri dalam file teks.</g2>"
   },
-  "8b93f9dffbe6efdb": {
-   "source": "If Direct3D, Vulkan or Metal can't start on your computer (no driver for it, some virtual machines), or its first window doesn't show within 10 seconds of its own (the time MDM spends loading your list and its icons doesn't count, however slow the computer is just after it starts), MDM draws with OpenGL, and <g1>View → Draw with</g1> says so and why. Choosing it again tries it again at the next start.",
-   "text": "Jika Direct3D, Vulkan, atau Metal tidak dapat dimulai di komputer Anda (tidak ada driver untuk itu, beberapa mesin virtual), atau jendela pertamanya tidak muncul dalam 10 detik (waktu yang dihabiskan MDM untuk memuat daftar dan ikon tidak dihitung, tidak peduli seberapa lambat komputer setelah dimulai), MDM akan merender dengan OpenGL, dan <g1>Tampilan → Render dengan</g1> akan menyatakan demikian dan alasannya. Memilihnya lagi akan mencoba lagi pada saat dimulai berikutnya."
-  },
   "8b95ee287644fd4f": {
    "source": "Mister Download Manager's link grabber collects a page's links, sorts them into packages, checks which are online and extracts the archives they bring.",
    "text": "Link grabber Mister Download Manager mengumpulkan tautan halaman, mengurutkannya ke dalam paket, memeriksa mana yang online, dan mengekstrak arsip yang dibawanya."
@@ -9997,6 +9981,10 @@
   "9757a8b628979f6a": {
    "source": "The list shows each quality with its size, best first, and the sound alone at the end. Check <g1>Save to</g1> and <g2>File name</g2>, then click <g3>Download Now</g3>, or <g4>Later</g4> to put it in the list for later. The video gets its own row and progress window, like any other download.",
    "text": "Daftar tersebut menunjukkan setiap kualitas dengan ukurannya, yang terbaik di awal, dan suara saja di akhir. Centang <g1>Simpan ke</g1> dan <g2>Nama file</g2>, lalu klik <g3>Unduh sekarang</g3>, atau <g4>Nanti</g4> untuk memasukkannya ke daftar untuk nanti. Video tersebut akan mendapatkan baris dan jendela progresnya sendiri, seperti unduhan lainnya."
+  },
+  "9763111f0a019af1": {
+   "source": "If Direct3D, Vulkan or Metal can't start on your graphics card (no driver for it, some virtual machines), or its first window doesn't show within 10 seconds of its own (the time MDM spends loading your list and its icons doesn't count, however slow the computer is just after it starts), MDM draws with OpenGL, and <g1>View → Draw with</g1> says so and why. Choosing it again tries it again at the next start.",
+   "text": "Jika Direct3D, Vulkan, atau Metal tidak dapat dimulai pada kartu grafis Anda (tidak ada driver untuk itu, beberapa mesin virtual), atau jendela pertamanya tidak muncul dalam 10 detik (waktu yang dihabiskan MDM untuk memuat daftar dan ikonnya tidak dihitung, tidak peduli seberapa lambat komputer setelah dimulai), MDM akan merender dengan OpenGL, dan <g1>Tampilan → Render dengan</g1> akan menyatakan demikian dan alasannya. Memilihnya lagi akan mencobanya lagi pada saat dimulai berikutnya."
   },
   "976e1bc04dee0c02": {
    "source": "Both the address you clicked and the one its redirects led to are checked, so a site you excluded stays excluded even when it sends you to another server. Everything else stays with the browser. Changes in Options reach the browser within a minute; you don't need to restart it.",
@@ -11786,10 +11774,6 @@
    "source": "Keep changes focused and match the code around them. A few rules hold everywhere:",
    "text": "Fokuskan perubahan dan sesuaikan dengan kode di sekitarnya. Beberapa aturan berlaku di mana saja:"
   },
-  "b1cfb9dac9c38d80": {
-   "source": "Then yt-dlp does what it does after a download: it joins the video and its sound with ffmpeg into one MP4, saves or embeds the subtitles, and converts the sound for an MP3, Opus or FLAC choice.",
-   "text": "Kemudian yt-dlp melakukan apa yang dilakukannya setelah unduhan: menggabungkan video dan suaranya dengan ffmpeg menjadi satu MP4, menyimpan atau menyematkan subtitle, dan mengonversi suara untuk pilihan MP3, Opus, atau FLAC."
-  },
   "b1d90b3e9d2a1cd5": {
    "source": "runs unit tests and end-to-end downloads against <x1/> with injected faults (slow, dropped and refused connections, servers without ranges, changing files). <x2/> runs the published speed comparison; its raw data is in <x3/>.",
    "text": "menjalankan pengujian unit dan unduhan ujung-ke-ujung terhadap <x1/> dengan kesalahan yang disuntikkan (koneksi lambat, terputus, dan ditolak, server tanpa rentang, berkas yang berubah). <x2/> menjalankan perbandingan kecepatan yang diterbitkan; data mentahnya ada di <x3/>."
@@ -11813,6 +11797,10 @@
   "b2181eccf65e86be": {
    "source": "This <g1>website</g1> counts visits with <g2>Statcounter</g2>, which sets a cookie and sees your IP address; it runs only on the website, never in the app.",
    "text": "Situs <g1>web</g1> ini menghitung kunjungan dengan <g2>Statcounter</g2>, yang mengatur cookie dan melihat alamat IP Anda; ini hanya berjalan di situs web, tidak pernah di aplikasi."
+  },
+  "b21b0cc3853450de": {
+   "source": "On Windows, when OpenGL fails on a card without Direct3D 12, MDM draws with Direct3D on Microsoft's software renderer (WARP) from the next start, and <g1>View → Draw with</g1> says why: OpenGL couldn't start, it is too old to draw MDM (older than 3.0, such as Intel's first HD Graphics, whose OpenGL 2.1 drew MDM's windows as garbage), its first window didn't show within 10 seconds, or MDM froze inside the graphics driver while OpenGL showed a frame (the older Intel HD Graphics and AMD Radeon cards' drivers did). Choosing <g2>OpenGL</g2> there tries it again.",
+   "text": "Di Windows, ketika OpenGL gagal pada kartu tanpa Direct3D 12, MDM akan merender dengan Direct3D pada perender perangkat lunak Microsoft (WARP) mulai dari awal berikutnya, dan <g1>Tampilan → Render dengan</g1> akan menyatakan alasannya: OpenGL tidak dapat dimulai, terlalu lama untuk merender MDM (lebih lama dari 3.0, seperti Intel HD Graphics pertama, yang OpenGL 2.1-nya merender jendela MDM sebagai sampah), jendela pertamanya tidak muncul dalam 10 detik, atau MDM macet di dalam driver grafis saat OpenGL menampilkan bingkai (driver kartu Intel HD Graphics dan AMD Radeon yang lebih lama melakukannya). Memilih <g2>OpenGL</g2> di sana akan mencobanya lagi."
   },
   "b23baab9a4561a1d": {
    "source": "Pauses running downloads.",
@@ -12862,10 +12850,6 @@
    "source": "Choose before you add",
    "text": "Pilih sebelum Anda menambah"
   },
-  "c20a850dfc745632": {
-   "source": "If neither can start, MDM draws with a software renderer (Microsoft's on Windows, Mesa's on Linux), so the window still opens (Remote Desktop, a virtual machine without a graphics driver). It works, but keeps the processor busier.",
-   "text": "Jika keduanya tidak dapat dijalankan, MDM akan merender dengan perender perangkat lunak (milik Microsoft di Windows, Mesa di Linux), sehingga jendela tetap terbuka (misalnya saat menggunakan Remote Desktop atau mesin virtual tanpa driver grafis). MDM tetap berfungsi, tetapi prosesor akan bekerja lebih keras."
-  },
   "c21ae87a328182aa": {
    "source": "<g1>Link grabber</g1><g2>A page's links gathered, sorted into packages and checked online, then the archives unpacked when they arrive.</g2>",
    "text": "<g1>Link grabber</g1><g2>Tautan dari suatu halaman dikumpulkan, diurutkan ke dalam paket, dan diperiksa secara daring, lalu arsipnya diekstrak setelah tiba.</g2>"
@@ -13401,10 +13385,6 @@
   "ca67cb26c4c8dabb": {
    "source": "View → Theme changes how MDM looks at once and keeps everything where it was. Pick one of the built-in looks, each with a light and a dark side, or make your own in a text file.",
    "text": "Tampilan → Tema mengubah tampilan MDM sekaligus dan menjaga semuanya tetap di tempatnya. Pilih salah satu tampilan bawaan, masing-masing dengan sisi terang dan gelap, atau buat sendiri dalam file teks."
-  },
-  "ca722db87f0d3bad": {
-   "source": "Last updated 2026-11-12 · applies to the app, the browser extension and misterdownloadmanager.com",
-   "text": "Terakhir diperbarui 2026-11-12 · berlaku untuk aplikasi, ekstensi peramban, dan misterdownloadmanager.com"
   },
   "ca7a6b77fb1e5a3c": {
    "source": "strengthens every edge and text colour on top.",
@@ -15258,10 +15238,6 @@
    "source": "Point at the video in your browser and click the Download video button that appears over it, or paste the page's address into Tasks → Download video from a…",
    "text": "Arahkan kursor ke video di peramban Anda dan klik tombol Unduh video yang muncul di atasnya, atau tempel alamat halaman ke Tugas → Unduh video dari…"
   },
-  "e7e684a8f8aec6c8": {
-   "source": "<g1>Hide web pages</g1> (on by default) leaves out links to pages (<x2/>, <x3/> and the like): they are neither shown nor downloaded.",
-   "text": "<g1>Sembunyikan halaman web</g1> (aktif secara default) tidak menyertakan tautan ke halaman (<x2/>, <x3/> dan sejenisnya): tautan tersebut tidak ditampilkan maupun diunduh."
-  },
   "e7f203ecd75caead": {
    "source": "Can my AI assistant use MDM? — Mister Download Manager",
    "text": "Bisakah asisten AI saya menggunakan MDM? — Mister Download Manager"
@@ -15569,10 +15545,6 @@
   "ec83076f0311f20e": {
    "source": "A theme is one small text file in <g1>TOML</g1> (or JSON, <x2/>; or a <g3>colour scheme</g3>, <x4/>). It names only what it changes; everything else comes from the theme it <x5/>:",
    "text": "Tema adalah satu file teks kecil dalam <g1>TOML</g1> (atau JSON, <x2/>; atau <g3>skema warna</g3>, <x4/>). Ini hanya menyebutkan apa yang diubahnya; yang lainnya berasal dari tema yang <x5/>:"
-  },
-  "ec8dbbc2dc38cd32": {
-   "source": "A torrent stopped by one of these says so in its event log, and isn't shared again when MDM starts. Raise or turn off the limit to share it again. - <g1>Limit uploading for all torrents to</g1> — off by default. Caps what all your torrents together send to other peers, while they download and while they share. A torrent's own upload limit, in its progress window, applies on top of it. - <g2>Open magnet links and .torrent files with Mister Download Manager</g2> — Windows then opens magnet links in your browser and <x3/> files in Explorer with MDM. This is for your Windows account only; a program you chose in Windows' <g4>Open with</g4> stays first. The setup can turn it on for you.",
-   "text": "Torrent yang dihentikan oleh salah satu pengaturan ini akan tercatat di log peristiwa, dan tidak akan dibagikan lagi saat MDM dimulai. Tingkatkan atau nonaktifkan batas untuk membagikannya lagi. - <g1>Batasi pengunggahan untuk semua torrent hingga</g1> — nonaktif secara default. Membatasi total data yang dikirimkan semua torrent Anda ke rekan lain, baik saat mengunduh maupun saat berbagi. Batas unggah torrent itu sendiri, di jendela progresnya, berlaku di atas batas ini. - <g2>Buka tautan magnet dan berkas .torrent dengan Mister Download Manager</g2> — Windows kemudian akan membuka tautan magnet di peramban Anda dan berkas <x3/> di Explorer dengan MDM. Ini hanya untuk akun Windows Anda; program yang Anda pilih di <g4>Buka dengan</g4> Windows tetap menjadi yang utama. Pengaturan dapat mengaktifkannya untuk Anda."
   },
   "ec99486fc82e0b86": {
    "source": "Options",
@@ -16098,10 +16070,6 @@
    "source": "Download File Info",
    "text": "Info File Unduhan"
   },
-  "f385c86abe758db3": {
-   "source": "Last updated 2026-11-12",
-   "text": "Terakhir diperbarui 12-11-2026"
-  },
   "f3901fedc4a7dd52": {
    "source": "<g1>Browser extension</g1><g2>Downloads you click in Chrome, Edge, Brave, Opera, Vivaldi or Firefox go straight to MDM, sign-in included.</g2>",
    "text": "<g1>Ekstensi browser</g1><g2>Unduhan yang Anda klik di Chrome, Edge, Brave, Opera, Vivaldi, atau Firefox langsung masuk ke MDM, termasuk login.</g2>"
@@ -16380,7 +16348,7 @@
   },
   "f89c54d71eb189a4": {
    "source": "If the graphics card is reset while MDM runs (a driver update), MDM starts again by itself. Lost twice in 10 minutes, it goes back to OpenGL, and <g1>View → Draw with</g1> says why.",
-   "text": "Jika kartu grafis diatur ulang saat MDM berjalan (pembaruan driver), MDM akan memulai lagi dengan sendirinya. Jika hilang dua kali dalam 10 menit, ia akan kembali ke OpenGL, dan <g1>Tampilan → Render dengan</g1> akan memberi tahu alasannya."
+   "text": "Jika kartu grafis diatur ulang saat MDM berjalan (pembaruan driver), MDM akan memulai lagi dengan sendirinya. Jika hilang dua kali dalam 10 menit, MDM akan kembali ke OpenGL, dan <g1>Tampilan → Render dengan</g1> akan menyatakan alasannya."
   },
   "f8b52274ed125d5f": {
    "source": "Tick <g1>Wake the computer to run this queue</g1> and a sleeping computer is woken a minute before the start time, so the network is back when the queue begins. It stays awake while the queue runs; afterwards its own sleep settings apply again. The line under the option says when the next wake is, or why there can't be one.",
@@ -16649,10 +16617,6 @@
   "fbba8f18d2fae06e": {
    "source": "A text box's bottom line while it can be typed in",
    "text": "Garis bawah kotak teks saat dapat diketik"
-  },
-  "fbc41fd4efa0fd9a": {
-   "source": "Download a video; <x1/> takes a quality's selector from <x2/> (<x3/> = the best single file; <x4/> = the sound alone as the site has it, not converted; <x5/>, <x6/>, <x7/> or <x8/> = the sound as an MP3 at that bitrate, <x9/> at its best variable one; <x10/> = as Opus; <x11/> = as FLAC, lossless but no better than the site's sound; conversions need ffmpeg). <x12/>: MDM's own downloader brings each stream yt-dlp finds over this many connections (8 by default, 1 to 128), a stream in pieces (HLS, DASH) this many pieces at once. <x13/> saves subtitles beside it: language codes from <x14/> (<x15/>), or <x16/> for every one the uploader gave; <x17/> takes the site's automatic captions instead; <x18/> puts them into the video (needs ffmpeg, MP4 or MKV). <x19/> sends the downloads' connections, and yt-dlp's (and ffmpeg's), through one network adapter, as for <x20/>; when it isn't connected, nothing starts.",
-   "text": "Mengunduh video; <x1/> mengambil pemilih kualitas dari <x2/> (<x3/> = file tunggal terbaik; <x4/> = audio saja seperti yang ada di situs, tidak dikonversi; <x5/>, <x6/>, <x7/> atau <x8/> = audio sebagai MP3 pada bitrate tersebut, <x9/> pada bitrate variabel terbaiknya; <x10/> = sebagai Opus; <x11/> = sebagai FLAC, lossless tetapi tidak lebih baik dari audio situs; konversi memerlukan ffmpeg). <x12/>: pengunduh MDM sendiri membawa setiap stream yang ditemukan yt-dlp melalui koneksi sebanyak ini (8 secara default, 1 hingga 128), sebuah stream dalam potongan (HLS, DASH) sebanyak ini sekaligus. <x13/> menyimpan subtitle di sampingnya: kode bahasa dari <x14/> (<x15/>), atau <x16/> untuk setiap subtitle yang diberikan pengunggah; <x17/> mengambil teks otomatis situs sebagai gantinya; <x18/> memasukkannya ke dalam video (memerlukan ffmpeg, MP4 atau MKV). <x19/> mengirimkan koneksi unduhan, dan koneksi yt-dlp (dan ffmpeg), melalui satu adaptor jaringan, seperti untuk <x20/>; ketika tidak terhubung, tidak ada yang dimulai."
   },
   "fbc5c79e5fad811f": {
    "source": "<g1>VS Code</g1>: in <x2/>, or <g3>MCP: Add Server</g3> in the command palette:",

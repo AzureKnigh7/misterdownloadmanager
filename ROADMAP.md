@@ -557,6 +557,11 @@ Bug fixes from the first days of 0.5.0, a Safari extension, and more file types.
 
 These ship in the next version.
 
+- ✅ Windows: a graphics card without Direct3D 12 (Intel's HD Graphics 3000 to 5500, older AMD
+  Radeon cards) draws with OpenGL, then with Direct3D 12 on Windows' own software renderer (WARP)
+  once OpenGL fails there: it can't start, is too old, shows no first window, or MDM freezes
+  inside its driver (read from the freeze report); remembered, **View → Draw with** says why, and
+  choosing **OpenGL** tries it again ([#847](https://github.com/anefzaoui/misterdownloadmanager/issues/847))
 - ✅ Help: videos that need you signed in, in short: the button over the video brings the page's
   own cookies, Options reads a browser profile's for pasted links and playlists (a separate
   profile with a spare account works well), and why some videos and networks need it (from

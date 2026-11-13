@@ -838,10 +838,6 @@
    "source": "The interface is in every language Windows 11 offers. The catalogs in <g1><x2/></g1> were made by machine translation, and each row marked <x3/> waits for a native speaker:",
    "text": "Arayüz, Windows 11'in sunduğu tüm dillerde kullanılabilir. <g1><x2/></g1> içindeki kataloglar makine çevirisiyle oluşturulmuştur ve <x3/> ile işaretlenmiş her satırın ana dili o dil olan bir çevirmen tarafından gözden geçirilmesi beklenmektedir:"
   },
-  "0c4e47b7b5c8f9f5": {
-   "source": "A freeze whose report shows the window thread inside the graphics driver as it shows a frame (<x1/> or <x2/> for Intel, <x3/> for NVIDIA, <x4/> for AMD, under <x5/>) is the driver's OpenGL stuck, not MDM: on Windows, choose <g6>View → Draw with → Direct3D</g6> (the default) and restart MDM, and update the graphics driver. If <g7>Draw with</g7> says Direct3D didn't start there, the line under it says why.",
-   "text": "Raporu, bir çerçeve gösterirken grafik sürücüsü içindeki pencere iş parçacığını gösteren bir donma (<x1/> veya Intel için <x2/>, NVIDIA için <x3/>, AMD için <x4/>, <x5/> altında) MDM'nin değil, sürücünün OpenGL'sinin takılmasıdır: Windows'ta <g6>Görünüm → Şununla çiz → Direct3D</g6> (varsayılan) seçeneğini belirleyin ve MDM'yi yeniden başlatın, ayrıca grafik sürücüsünü güncelleyin. Eğer <g7>Şununla çiz</g7> Direct3D'nin orada başlamadığını belirtiyorsa, altındaki satır nedenini açıklar."
-  },
   "0c6ce890ecccf13e": {
    "source": "For an internet plan with a data cap, select <g1>Download limits</g1> on the left:",
    "text": "Veri kotası olan bir internet paketi kullanılıyorsa soldaki <g1>İndirme sınırları</g1> seçeneğini belirleyin:"
@@ -3450,10 +3446,6 @@
    "source": "Choose the subtitles; tick Put them into the video to keep them inside the file.",
    "text": "Altyazıları seçin; dosyanın içine eklemek için Videoya yerleştir seçeneğini işaretleyin."
   },
-  "33cd34762a5593c2": {
-   "source": "It takes the video you clicked: its own file when it plays one, or the stream the player loaded (HLS or DASH), else the page. When the button can't tell which one you mean, the toolbar button's <g1>Media on this page</g1> lists them all. Embedded players work too, and your sign-in for the site, the page that embeds the player and your browser's User-Agent go with it, so videos for members, or that play only on the site that embeds them, can be downloaded. Sound players get the button too.",
-   "text": "Tıkladığınız videoyu alır: bir dosya oynatıyorsa kendi dosyasını veya oynatıcının yüklediği akışı (HLS veya DASH), aksi takdirde sayfayı. Düğme hangisini kastettiğinizi anlayamadığında, araç çubuğu düğmesinin <g1>Bu sayfadaki medya</g1> tümünü listeler. Gömülü oynatıcılar da çalışır ve siteye girişiniz, oynatıcıyı gömen sayfa ve tarayıcınızın User-Agent'ı da onunla birlikte gider, böylece üyeler için veya yalnızca onları gömen sitede oynatılan videolar indirilebilir. Ses oynatıcıları da düğmeyi alır."
-  },
   "33e74c2131bce5b0": {
    "source": "Torrents share the cap fairly",
    "text": "Torrentler sınırı adil bir şekilde paylaşır"
@@ -3545,10 +3537,6 @@
   "35092e177f7efaa5": {
    "source": "Download complete with Open and Open folder",
    "text": "Aç ve Klasörü aç seçenekleriyle İndirme tamamlandı"
-  },
-  "3512eeafea5246da": {
-   "source": "<g1>Catching problems.</g1> When MDM crashes (a Windows exception, a signal on Linux, a Mach exception on macOS), panics, or freezes, it asks the monitor for a dump. A freeze is a frame of the window running more than 8 s, seen by a watchdog thread that ignores time spent asleep. It times both parts of a frame: what MDM handles (the commands that come in, the clock of downloads, queues and the Scheduler), which runs minimized too, and the drawing; never the wait between frames. The watchdog also measures how much processor time the window thread got meanwhile, and the report says what that means: it ran all along (a loop), it waited in a lock or on I/O (a deadlock), or it hardly ran in ordinary code, which is a computer too busy to run MDM or slow to load it from disk, most likely not MDM's bug (those share one signature, <x2/>). When the window thread is already back in the event loop by the time the dump is written, the freeze was over before the snapshot, so its stack can't explain it; those reports say so and share the signature <x3/>. macOS doesn't measure it yet. The monitor then writes a <g4>minidump</g4> of every thread from outside, through <x5/> and <x6/>. A crashed process never writes its own dump, which is how Firefox, Crashpad and Sentry do it too.",
-   "text": "<g1>Sorunları yakalama.</g1> MDM çöktüğünde (Windows'ta bir özel durum, Linux'ta bir sinyal, macOS'ta bir Mach özel durumu), paniklediğinde veya donduğunda, monitörden bir döküm ister. Donma, pencerenin 8 saniyeden fazla çalıştığı bir kare olup, uyku süresini göz ardı eden bir izleyici iş parçacığı tarafından görülür. Bir karenin her iki bölümünü de zamanlar: MDM'nin işlediği (gelen komutlar, indirmelerin saati, kuyruklar ve Zamanlayıcı), bu da küçültülmüş olarak çalışır, ve çizim; kareler arasındaki bekleme süresini asla. İzleyici ayrıca pencere iş parçacığının bu arada ne kadar işlemci süresi aldığını da ölçer ve rapor bunun ne anlama geldiğini söyler: sürekli çalıştı (bir döngü), bir kilitte veya G/Ç'de bekledi (bir kilitlenme) veya sıradan kodda neredeyse hiç çalışmadı, bu da bilgisayarın MDM'yi çalıştırmak için çok meşgul olduğu veya diskten yüklemek için yavaş olduğu anlamına gelir, büyük olasılıkla MDM'nin hatası değildir (bunlar <x2/> tek bir imzayı paylaşır). Döküm yazıldığı sırada pencere iş parçacığı zaten olay döngüsüne geri dönmüşse, donma anlık görüntüden önce bitmiş demektir, bu nedenle yığını bunu açıklayamaz; bu raporlar bunu belirtir ve <x3/> imzasını paylaşır. macOS henüz bunu ölçmez. Monitör daha sonra <x5/> ve <x6/> aracılığıyla dışarıdan her iş parçacığının bir <g4>minidump'ını</g4> yazar. Çöken bir işlem asla kendi dökümünü yazmaz, Firefox, Crashpad ve Sentry de bunu böyle yapar."
   },
   "3513f93cb0fa7d72": {
    "source": "<g1>Far</g1> (red): over 150 ms, usually another continent. A far server is often slower, and more connections help it most.",
@@ -4522,6 +4510,10 @@
    "source": "Links that work only once no longer fail with \"403 Forbidden\".",
    "text": "Yalnızca bir kez çalışan bağlantılar artık \"403 Yasak\" hatasıyla başarısız olmuyor."
   },
+  "43510d0cf7beac55": {
+   "source": "<g1>Catching problems.</g1> When MDM crashes (a Windows exception, a signal on Linux, a Mach exception on macOS), panics, or freezes, it asks the monitor for a dump. A freeze is a frame of the window running more than 8 s, seen by a watchdog thread that ignores time spent asleep and the first minute after the computer wakes, while its disk, network and screen come back: a stall then is written to the log, and reported only if it lasts past that minute. It times both parts of a frame: what MDM handles (the commands that come in, the clock of downloads, queues and the Scheduler), which runs minimized too, and the drawing; never the wait between frames. The watchdog also measures how much processor time the window thread got meanwhile, and the report says what that means: it ran all along (a loop), it waited in a lock or on I/O (a deadlock), or it hardly ran in ordinary code, which is a computer too busy to run MDM or slow to load it from disk, most likely not MDM's bug (those share one signature, <x2/>). Each report also names what the frame was doing when it stopped (the tray icon, the downloads' progress, drawing the main window). When the window thread is already back in the event loop, or in the pause after a frame of a hidden window, by the time the dump is written, the freeze was over before the snapshot, so its stack can't explain it; those reports say so and share the signature <x3/>. macOS doesn't measure it yet. The monitor then writes a <g4>minidump</g4> of every thread from outside, through <x5/> and <x6/>. A crashed process never writes its own dump, which is how Firefox, Crashpad and Sentry do it too.",
+   "text": "<g1>Sorunları yakalama.</g1> MDM çöktüğünde (Windows'ta bir özel durum, Linux'ta bir sinyal, macOS'ta bir Mach özel durumu), paniklediğinde veya donduğunda, monitörden bir döküm ister. Donma, pencerenin 8 saniyeden fazla çalıştığı bir kare olup, uyku modunda geçirilen süreyi ve bilgisayar uyandıktan sonraki ilk dakikayı, disk, ağ ve ekran geri gelirken göz ardı eden bir izleyici iş parçacığı tarafından görülür: bir takılma günlüğe yazılır ve yalnızca bu dakikayı aşarsa rapor edilir. Bir karenin her iki bölümünü de zamanlar: MDM'nin ele aldığı (gelen komutlar, indirmelerin saati, kuyruklar ve Zamanlayıcı), bu da küçültülmüş olarak çalışır ve çizim; kareler arasındaki beklemeyi asla zamanlamaz. İzleyici ayrıca pencere iş parçacığının bu arada ne kadar işlemci süresi aldığını da ölçer ve rapor bunun ne anlama geldiğini belirtir: sürekli çalıştı (bir döngü), bir kilitte veya G/Ç'de bekledi (bir kilitlenme) veya sıradan kodda neredeyse hiç çalışmadı, bu da bilgisayarın MDM'yi çalıştırmak için çok meşgul olduğu veya diskten yüklemek için yavaş olduğu anlamına gelir, büyük olasılıkla MDM'nin hatası değildir (bunlar <x2/> tek bir imzayı paylaşır). Her rapor ayrıca durduğunda karenin ne yaptığını da belirtir (tepsi simgesi, indirmelerin ilerlemesi, ana pencereyi çizme). Döküm yazıldığı sırada pencere iş parçacığı zaten olay döngüsüne geri döndüyse veya gizli bir pencerenin karesinden sonraki duraklamadaysa, donma anlık görüntüden önce sona ermiş demektir, bu nedenle yığını bunu açıklayamaz; bu raporlar bunu belirtir ve <x3/> imzasını paylaşır. macOS henüz bunu ölçmüyor. Monitör daha sonra <x5/> ve <x6/> aracılığıyla dışarıdan her iş parçacığının bir <g4>minidump</g4>'ını yazar. Çöken bir işlem asla kendi dökümünü yazmaz, Firefox, Crashpad ve Sentry de bunu böyle yapar."
+  },
   "436bac2c4f3d3f4c": {
    "source": "<g1>Downloads → Start queue</g1> and <g2>Downloads → Stop queue</g2> list them too.",
    "text": "<g1>İndirilenler → Kuyruğu başlat</g1> ve <g2>İndirilenler → Kuyruğu durdur</g2> da bunları listeler."
@@ -4577,6 +4569,10 @@
   "4447a34a8cbe1ae6": {
    "source": "<g1>The Categories pane and the menus</g1> (<g2>#113</g2>): the pane reads as a tree (each category named with its count, open or shut, selected), the menu bar and every right-click menu as menus whose items can be run, and <g3>Shift+F10</g3> or the <g4>Menu</g4> key opens the selected category's menu. A menu opened from the keyboard no longer stays invisible until the mouse moves.",
    "text": "<g1>Kategoriler bölmesi ve menüler</g1> (<g2>#113</g2>): bölme bir ağaç olarak okunuyor (her kategori sayısıyla adlandırılmış, açık veya kapalı, seçili), menü çubuğu ve her sağ tıklama menüsü öğeleri çalıştırılabilen menüler olarak okunuyor ve <g3>Shift+F10</g3> veya <g4>Menü</g4> tuşu seçili kategorinin menüsünü açıyor. Klavyeden açılan bir menü, fare hareket edene kadar artık görünmez kalmıyor."
+  },
+  "44502a7e800ed659": {
+   "source": "A torrent stopped by one of these says so in its event log, and isn't shared again when MDM starts. Raise or turn off the limit to share it again. - <g1>Limit uploading for all torrents to</g1> — off by default. Caps what all your torrents together send to other peers, while they download and while they share. A torrent's own upload limit, in its progress window, applies on top of it. - <g2>Open magnet links and .torrent files with Mister Download Manager</g2> — Windows then opens magnet links in your browser and <x3/> files in Explorer with MDM. This is for your Windows account only; a program you chose in Windows' <g4>Open with</g4> stays first. The setup can turn it on for you. On Linux it makes MDM your desktop's default app for them; on macOS, their default app (Finder offers MDM in <g5>Open With</g5> for <x6/> files either way, and a double-click opens them in MDM when no other app is their default).",
+   "text": "Bu sınırlamalardan biri nedeniyle durdurulan bir torrent, olay günlüğünde bunu belirtir ve MDM başladığında tekrar paylaşılmaz. Tekrar paylaşmak için sınırı yükseltin veya kapatın. - <g1>Tüm torrentlerde karşıya yükleme hızını şununla sınırla:</g1> — varsayılan olarak kapalıdır. Tüm torrentlerinizin indirme ve paylaşım sırasında diğer eşlere birlikte gönderdiği veriyi sınırlar. Bir torrentin kendi ilerleme penceresindeki karşıya yükleme sınırı, bunun üzerine uygulanır. - <g2>Mister Download Manager ile magnet bağlantılarını ve .torrent dosyalarını aç</g2> — Windows daha sonra tarayıcınızdaki magnet bağlantılarını ve Gezgin'deki <x3/> dosyalarını MDM ile açar. Bu yalnızca Windows hesabınız içindir; Windows'un <g4>Birlikte aç</g4> seçeneğinde seçtiğiniz bir program öncelikli kalır. Kurulum bunu sizin için açabilir. Linux'ta MDM'yi bunlar için masaüstünüzün varsayılan uygulaması yapar; macOS'ta, bunların varsayılan uygulaması (Finder, <x6/> dosyaları için <g5>Birlikte Aç</g5> seçeneğinde MDM'yi her iki durumda da sunar ve başka hiçbir uygulama varsayılan değilse çift tıklama onları MDM'de açar)."
   },
   "445e6378c12f1e16": {
    "source": "<g1>Image gallery support:</g1> download whole galleries (Flickr, Imgur, DeviantArt and more) with gallery-dl.",
@@ -4798,6 +4794,10 @@
    "source": "The extension now installs from your browser's store, updates itself, and catches more of what you download.",
    "text": "Uzantı artık tarayıcınızın mağazasından yükleniyor, kendini güncelliyor ve indirdiğiniz daha fazla şeyi yakalıyor."
   },
+  "483cd37a4558c14a": {
+   "source": "If neither can start, MDM draws with a software renderer (Microsoft's on Windows, Mesa's on Linux), so the window still opens (Remote Desktop, a virtual machine without a graphics driver). It works, but keeps the processor busier while a window changes.",
+   "text": "İkisi de başlatılamazsa, MDM bir yazılım oluşturucuyla (Windows'ta Microsoft'un, Linux'ta Mesa'nın) çizim yapar, böylece pencere yine de açılır (Uzak Masaüstü, grafik sürücüsü olmayan bir sanal makine). Çalışır, ancak bir pencere değişirken işlemciyi daha meşgul eder."
+  },
   "487a0af4191d3496": {
    "source": "<g1><g2>Its site says so</g2></g1><g3>its site says</g3>",
    "text": "<g1><g2>Sitesinde öyle yazıyor</g2></g1><g3>sitesinde öyle yazıyor</g3>"
@@ -4925,10 +4925,6 @@
   "4a575d95633d11ec": {
    "source": "Free Download Manager",
    "text": "Free Download Manager"
-  },
-  "4a68031b1da16fe4": {
-   "source": "Right-click a link, a video, a sound or a picture and choose <g1>Download with Mister Download Manager</g1>. MDM downloads it whatever its type: you asked for it, so the file types list and the excluded sites don't apply here (they only decide which downloads MDM takes over by itself). A video that plays as a stream goes to the <g2>Download video</g2> window with the stream its player loaded (HLS or DASH), as the <g3>button over videos</g3> sends it, with your cookies for the stream's server and the page as the referrer.",
-   "text": "Bir bağlantıya, videoya, ses dosyasına veya resme sağ tıklayın ve <g1>Mister Download Manager ile İndir</g1>'i seçin. MDM, türü ne olursa olsun seçtiğiniz içeriği indirir. İndirmeyi siz başlattığınız için dosya türleri listesi ve hariç tutulan siteler burada geçerli değildir (bunlar yalnızca MDM'nin kendiliğinden devralacağı indirmeleri belirler). Akış olarak oynatılan bir video, oynatıcının yüklediği akışla (HLS veya DASH) birlikte <g2>Videoyu indir</g2> penceresinde açılır. <g3>Videoların üzerindeki düğme</g3> de aynı şekilde çalışır. Akışın sunucusuna çerezleriniz ve yönlendiren sayfa olarak bu sayfa gönderilir."
   },
   "4a736a6235625512": {
    "source": "Connections and resuming in detail →",
@@ -6762,10 +6758,6 @@
    "source": "The video download button moves to a free corner instead of covering a control of the page, such as a thumbnail's watch-later button (<g1>#421</g1>). Dragging it still puts it where you want it.",
    "text": "Video indirme düğmesi, sayfanın bir kontrolünü (örneğin bir küçük resmin daha sonra izle düğmesi gibi) kapatmak yerine boş bir köşeye taşınır (<g1>#421</g1>). Sürüklemek hala istediğiniz yere koyar."
   },
-  "65da44cc551abd0f": {
-   "source": "<g1>Download complete</g1> shows the file's size, its address and where it was saved. Choose <g2>Open</g2>, <g3>Open with...</g3>, <g4>Open folder</g4> or <g5>Close</g5>. On Windows you can also drag the small box at the bottom right into Explorer, an email or a chat to drop the file there. The window shows above your other programs until you click it, without taking the keyboard from the one you're typing in.",
-   "text": "<g1>İndirme tamamlandı</g1> penceresi dosyanın boyutunu, adresini ve kaydedildiği yeri gösterir. <g2>Aç</g2>, <g3>Birlikte aç...</g3>, <g4>Klasörü aç</g4> veya <g5>Kapat</g5> seçeneklerinden birini belirleyin. Windows'ta, sağ alttaki küçük kutuyu Explorer'a, bir e-postaya veya sohbete sürükleyerek dosyayı oraya bırakabilirsiniz. Bu pencere, siz tıklayana kadar diğer programlarınızın üzerinde görünür ve yazdığınız programın klavyesini devralmaz."
-  },
   "662e8cdda4078826": {
    "source": "32 MiB, one connection in three crawls at 128 KB/s",
    "text": "32 MiB, 128 KB/s hızında üç taramada tek bağlantı"
@@ -7005,6 +6997,10 @@
   "6a3e3e5c75482fe1": {
    "source": "Contribute — Mister Download Manager",
    "text": "Katkıda Bulun — Mister Download Manager"
+  },
+  "6a404128afe84a22": {
+   "source": "A freeze whose report shows the window thread inside the graphics driver as it shows a frame (<x1/> or <x2/> for Intel, <x3/> for NVIDIA, <x4/> for AMD, under <x5/>) is the driver's OpenGL stuck, not MDM: on Windows, choose <g6>View → Draw with → Direct3D</g6> (the default) and restart MDM, and update the graphics driver. If <g7>Draw with</g7> says Direct3D didn't start there, the line under it says why; MDM then remembers the freeze and draws with WARP from the next start.",
+   "text": "Raporu, bir kare gösterirken grafik sürücüsünün içindeki pencere iş parçacığını gösteren bir donma (<x1/> veya <x2/> Intel için, <x3/> NVIDIA için, <x4/> AMD için, <x5/> altında) sürücünün OpenGL'inin takılmasıdır, MDM'nin değil: Windows'ta, <g6>Görünüm → Şununla çiz → Direct3D</g6> (varsayılan) seçeneğini seçin ve MDM'yi yeniden başlatın, ayrıca grafik sürücüsünü güncelleyin. Eğer <g7>Şununla çiz</g7> Direct3D'nin orada başlamadığını söylüyorsa, altındaki satır nedenini belirtir; MDM daha sonra donmayı hatırlar ve bir sonraki başlangıçtan itibaren WARP ile çizim yapar."
   },
   "6a658020a3c19e30": {
    "source": "Other systems and files",
@@ -7842,10 +7838,6 @@
    "source": "From top to bottom:",
    "text": "Yukarıdan aşağıya:"
   },
-  "76e8fe34285e22ca": {
-   "source": "Turn the look-ups off in <g1>Options → Archives → Look links up when they arrive</g1>. Some file hosts count a look-up as a download.",
-   "text": "Aramaları <g1>Seçenekler → Arşivler → Bağlantılar geldiğinde ara</g1> bölümünden kapatın. Bazı dosya barındırıcıları bir aramayı indirme olarak sayar."
-  },
   "7704f35f9d60deac": {
    "source": "Our benchmark, replayed: the same PC, the same test server, the median of alternating runs.",
    "text": "Kıyaslama testimiz tekrarlandı: aynı bilgisayar, aynı test sunucusu, dönüşümlü testlerin medyanı."
@@ -8037,10 +8029,6 @@
   "7a31f6dd87f98452": {
    "source": "<g1>The window no longer freezes when the system's sleep or keychain service is slow</g1> (follows <g2>#222</g2>): a queue set to <g3>Wake the computer to run this queue</g3> asks the system to keep the computer awake while it runs. On Linux that is logind, which can be slow to answer just after the computer wakes, exactly when such a queue starts, and MDM waited for it on the window's own thread (asking again every 5 seconds while it refused). It is now asked in the background, on every system; the queue's downloads, retries and log lines are the same. A keyring that doesn't answer at start (a stopped GNOME Keyring) is now waited for once, at most 5 seconds, instead of once per saved password, and saving the list no longer asks it at all. On Linux the check for a tray to hide windows in, and in Download File Info the check that <g4>Save As</g4> isn't a folder (slow on a network share that doesn't answer), no longer run on the window's thread on every frame.",
    "text": "<g1>Sistemin uyku veya anahtarlık hizmeti yavaş olduğunda pencere artık donmuyor</g1> ( <g2>#222</g2> devamı): <g3>Bu kuyruğu çalıştırmak için bilgisayarı uyandır</g3> olarak ayarlanmış bir kuyruk, çalışırken bilgisayarı uyanık tutmasını sistemden ister. Linux'ta bu, bilgisayar uyandıktan hemen sonra, tam da böyle bir kuyruk başladığında yavaş yanıt verebilen logind'dir ve MDM, pencerenin kendi iş parçacığında yanıtını beklerdi (reddedildiğinde her 5 saniyede bir tekrar sorarak). Artık her sistemde arka planda sorulur; kuyruğun indirmeleri, yeniden denemeleri ve günlük satırları aynıdır. Başlangıçta yanıt vermeyen bir anahtarlık (durdurulmuş bir GNOME Keyring) artık kaydedilen her parola için bir kez yerine, en fazla 5 saniye boyunca bir kez beklenir ve listenin kaydedilmesi artık hiç sormaz. Linux'ta pencereleri gizlemek için bir tepsi olup olmadığını kontrol etme ve Dosya Bilgilerini İndir'de <g4>Farklı Kaydet</g4>'in bir klasör olmadığını kontrol etme (yanıt vermeyen bir ağ paylaşımında yavaş), artık her karede pencerenin iş parçacığında çalışmaz."
-  },
-  "7a431c024b9ed18e": {
-   "source": "Choose <g1>Subtitles</g1> if you want them (see below).",
-   "text": "Altyazı istiyorsanız <g1>Altyazılar</g1>'ı seçin (aşağıya bakın)."
   },
   "7a5b7ab31d5f22cb": {
    "source": "Click <g1>Add Torrent</g1> on the toolbar to open a <x2/> file, or use the arrow next to it for <g3>Add magnet link...</g3>. A magnet link pasted into <g4>Add URL</g4> works too. Torrents land in the same list as your other downloads, marked <g5>Torrent</g5> in the <g6>Source</g6> column, and go into queues and the Scheduler like them.",
@@ -9238,10 +9226,6 @@
    "source": "<g1>Themes</g1><g2>Nine looks, light and dark, from Classic to Aqua, or your own in a text file.</g2>",
    "text": "<g1>Temalar</g1><g2>Klasik'ten Aqua'ya kadar dokuz görünüm, açık ve koyu, veya kendi temanız bir metin dosyasında.</g2>"
   },
-  "8b93f9dffbe6efdb": {
-   "source": "If Direct3D, Vulkan or Metal can't start on your computer (no driver for it, some virtual machines), or its first window doesn't show within 10 seconds of its own (the time MDM spends loading your list and its icons doesn't count, however slow the computer is just after it starts), MDM draws with OpenGL, and <g1>View → Draw with</g1> says so and why. Choosing it again tries it again at the next start.",
-   "text": "Bilgisayarınızda Direct3D, Vulkan veya Metal başlatılamazsa (sürücüsü yoksa, bazı sanal makinelerde), veya ilk penceresi 10 saniye içinde açılmazsa (MDM'nin listenizi ve simgelerini yüklemesi için harcadığı süre sayılmaz, bilgisayar başlangıçta ne kadar yavaş olursa olsun), MDM OpenGL ile çizim yapar ve <g1>Görünüm → Şununla çiz</g1> bu durumu ve nedenini belirtir. Tekrar seçmek, bir sonraki başlangıçta tekrar denemesini sağlar."
-  },
   "8b95ee287644fd4f": {
    "source": "Mister Download Manager's link grabber collects a page's links, sorts them into packages, checks which are online and extracts the archives they bring.",
    "text": "Mister Download Manager'ın bağlantı yakalayıcısı bir sayfanın bağlantılarını toplar, bunları paketler halinde sıralar, hangilerinin çevrimiçi olduğunu denetler ve getirdikleri arşivleri çıkarır."
@@ -10001,6 +9985,10 @@
   "9757a8b628979f6a": {
    "source": "The list shows each quality with its size, best first, and the sound alone at the end. Check <g1>Save to</g1> and <g2>File name</g2>, then click <g3>Download Now</g3>, or <g4>Later</g4> to put it in the list for later. The video gets its own row and progress window, like any other download.",
    "text": "Liste, her kaliteyi boyutuyla birlikte, en iyiden başlayarak ve en sonda yalnızca sesi gösterir. <g1>Kaydedileceği yer</g1> ve <g2>Dosya adı</g2> seçeneklerini kontrol edin, ardından <g3>Şimdi İndir</g3> düğmesine tıklayın veya daha sonra indirme listesine eklemek için <g4>Sonra</g4> seçeneğini kullanın. Video, diğer indirmeler gibi kendi satırına ve ilerleme penceresine sahip olur."
+  },
+  "9763111f0a019af1": {
+   "source": "If Direct3D, Vulkan or Metal can't start on your graphics card (no driver for it, some virtual machines), or its first window doesn't show within 10 seconds of its own (the time MDM spends loading your list and its icons doesn't count, however slow the computer is just after it starts), MDM draws with OpenGL, and <g1>View → Draw with</g1> says so and why. Choosing it again tries it again at the next start.",
+   "text": "Grafik kartınızda Direct3D, Vulkan veya Metal başlatılamazsa (sürücüsü yoksa, bazı sanal makinelerde), veya ilk penceresi kendi başına 10 saniye içinde görünmezse (MDM'nin listenizi ve simgelerini yüklemesi için harcadığı süre sayılmaz, bilgisayar başlangıçta ne kadar yavaş olursa olsun), MDM OpenGL ile çizim yapar ve <g1>Görünüm → Şununla çiz</g1> bunu ve nedenini belirtir. Tekrar seçmek, bir sonraki başlangıçta tekrar denemesini sağlar."
   },
   "976e1bc04dee0c02": {
    "source": "Both the address you clicked and the one its redirects led to are checked, so a site you excluded stays excluded even when it sends you to another server. Everything else stays with the browser. Changes in Options reach the browser within a minute; you don't need to restart it.",
@@ -11790,10 +11778,6 @@
    "source": "Keep changes focused and match the code around them. A few rules hold everywhere:",
    "text": "Değişiklikleri odaklanmış tutun ve etraflarındaki kodla eşleştirin. Birkaç kural her yerde geçerlidir:"
   },
-  "b1cfb9dac9c38d80": {
-   "source": "Then yt-dlp does what it does after a download: it joins the video and its sound with ffmpeg into one MP4, saves or embeds the subtitles, and converts the sound for an MP3, Opus or FLAC choice.",
-   "text": "Ardından yt-dlp, indirme sonrası yaptığı şeyi yapar: videoyu ve sesini ffmpeg ile tek bir MP4'te birleştirir, altyazıları kaydeder veya gömer ve bir MP3, Opus veya FLAC seçeneği için sesi dönüştürür."
-  },
   "b1d90b3e9d2a1cd5": {
    "source": "runs unit tests and end-to-end downloads against <x1/> with injected faults (slow, dropped and refused connections, servers without ranges, changing files). <x2/> runs the published speed comparison; its raw data is in <x3/>.",
    "text": "Yapay olarak oluşturulan hatalarla (yavaşlayan, kesilen ve reddedilen bağlantılar, aralık isteğini desteklemeyen sunucular, değişen dosyalar) <x1/> üzerinde birim testleri ve uçtan uca indirme testleri çalıştırır. <x2/>, yayımlanan hız karşılaştırmasını çalıştırır; ham veriler <x3/>'tedir."
@@ -11817,6 +11801,10 @@
   "b2181eccf65e86be": {
    "source": "This <g1>website</g1> counts visits with <g2>Statcounter</g2>, which sets a cookie and sees your IP address; it runs only on the website, never in the app.",
    "text": "Bu <g1>web sitesi</g1>, bir çerez ayarlayan ve IP adresinizi gören <g2>Statcounter</g2> ile ziyaretleri sayar; yalnızca web sitesinde çalışır, uygulamada asla çalışmaz."
+  },
+  "b21b0cc3853450de": {
+   "source": "On Windows, when OpenGL fails on a card without Direct3D 12, MDM draws with Direct3D on Microsoft's software renderer (WARP) from the next start, and <g1>View → Draw with</g1> says why: OpenGL couldn't start, it is too old to draw MDM (older than 3.0, such as Intel's first HD Graphics, whose OpenGL 2.1 drew MDM's windows as garbage), its first window didn't show within 10 seconds, or MDM froze inside the graphics driver while OpenGL showed a frame (the older Intel HD Graphics and AMD Radeon cards' drivers did). Choosing <g2>OpenGL</g2> there tries it again.",
+   "text": "Windows'ta, Direct3D 12 olmayan bir kartta OpenGL başarısız olursa, MDM bir sonraki başlangıçtan itibaren Microsoft'un yazılım oluşturucusu (WARP) üzerinde Direct3D ile çizim yapar ve <g1>Görünüm → Şununla çiz</g1> nedenini belirtir: OpenGL başlatılamadı, MDM'yi çizmek için çok eski (3.0'dan eski, örneğin Intel'in ilk HD Graphics'i, OpenGL 2.1'i MDM pencerelerini çöp olarak çiziyordu), ilk penceresi 10 saniye içinde görünmedi veya OpenGL bir kare gösterirken MDM grafik sürücüsünün içinde dondu (eski Intel HD Graphics ve AMD Radeon kartlarının sürücüleri bunu yapıyordu). Orada <g2>OpenGL</g2> seçeneğini seçmek tekrar denemesini sağlar."
   },
   "b23baab9a4561a1d": {
    "source": "Pauses running downloads.",
@@ -12866,10 +12854,6 @@
    "source": "Choose before you add",
    "text": "Eklemeden önce seçin"
   },
-  "c20a850dfc745632": {
-   "source": "If neither can start, MDM draws with a software renderer (Microsoft's on Windows, Mesa's on Linux), so the window still opens (Remote Desktop, a virtual machine without a graphics driver). It works, but keeps the processor busier.",
-   "text": "İkisi de başlatılamazsa MDM, yazılım tabanlı bir çizici kullanır (Windows'ta Microsoft'un, Linux'ta Mesa'nın). Böylece pencere yine de açılır; örneğin Uzak Masaüstü'nde veya grafik sürücüsü olmayan bir sanal makinede. Bu yöntem çalışır, ancak işlemciyi daha fazla meşgul eder."
-  },
   "c21ae87a328182aa": {
    "source": "<g1>Link grabber</g1><g2>A page's links gathered, sorted into packages and checked online, then the archives unpacked when they arrive.</g2>",
    "text": "<g1>Bağlantı yakalayıcı</g1><g2>Bir sayfanın bağlantıları toplanır, paketlere ayrılır ve çevrimiçi kontrol edilir, ardından arşivler geldiklerinde açılır.</g2>"
@@ -13405,10 +13389,6 @@
   "ca67cb26c4c8dabb": {
    "source": "View → Theme changes how MDM looks at once and keeps everything where it was. Pick one of the built-in looks, each with a light and a dark side, or make your own in a text file.",
    "text": "Görünüm → Tema, MDM'nin görünümünü anında değiştirir ve her şeyi yerli yerinde tutar. Yerleşik görünümlerden birini seçin, her birinin açık ve koyu tarafı vardır veya kendi temanızı bir metin dosyasında oluşturun."
-  },
-  "ca722db87f0d3bad": {
-   "source": "Last updated 2026-11-12 · applies to the app, the browser extension and misterdownloadmanager.com",
-   "text": "Son güncelleme 12.11.2026 · uygulama, tarayıcı uzantısı ve misterdownloadmanager.com için geçerlidir"
   },
   "ca7a6b77fb1e5a3c": {
    "source": "strengthens every edge and text colour on top.",
@@ -15266,10 +15246,6 @@
    "source": "Point at the video in your browser and click the Download video button that appears over it, or paste the page's address into Tasks → Download video from a…",
    "text": "Tarayıcınızda videonun üzerine gelin ve beliren Videoyu indir düğmesine tıklayın veya sayfanın adresini Görevler → Bir sayfadan video indir…"
   },
-  "e7e684a8f8aec6c8": {
-   "source": "<g1>Hide web pages</g1> (on by default) leaves out links to pages (<x2/>, <x3/> and the like): they are neither shown nor downloaded.",
-   "text": "<g1>Web sayfalarını gizle</g1> (varsayılan olarak açık), sayfalara (<x2/>, <x3/> ve benzerleri) giden bağlantıları listeden çıkarır: bu bağlantılar ne gösterilir ne de indirilir."
-  },
   "e7f203ecd75caead": {
    "source": "Can my AI assistant use MDM? — Mister Download Manager",
    "text": "Yapay zekâ asistanım MDM'yi kullanabilir mi? — Mister Download Manager"
@@ -15577,10 +15553,6 @@
   "ec83076f0311f20e": {
    "source": "A theme is one small text file in <g1>TOML</g1> (or JSON, <x2/>; or a <g3>colour scheme</g3>, <x4/>). It names only what it changes; everything else comes from the theme it <x5/>:",
    "text": "Bir tema, <g1>TOML</g1> (veya JSON, <x2/>; veya bir <g3>renk şeması</g3>, <x4/>) biçiminde küçük bir metin dosyasıdır. Sadece değiştirdiği şeyleri adlandırır; diğer her şey <x5/> olduğu temadan gelir:"
-  },
-  "ec8dbbc2dc38cd32": {
-   "source": "A torrent stopped by one of these says so in its event log, and isn't shared again when MDM starts. Raise or turn off the limit to share it again. - <g1>Limit uploading for all torrents to</g1> — off by default. Caps what all your torrents together send to other peers, while they download and while they share. A torrent's own upload limit, in its progress window, applies on top of it. - <g2>Open magnet links and .torrent files with Mister Download Manager</g2> — Windows then opens magnet links in your browser and <x3/> files in Explorer with MDM. This is for your Windows account only; a program you chose in Windows' <g4>Open with</g4> stays first. The setup can turn it on for you.",
-   "text": "Bu limitlerden biriyle durdurulan bir torrent, olay günlüğünde bunu belirtir ve MDM başladığında tekrar paylaşılmaz. Tekrar paylaşmak için limiti yükseltin veya kapatın. - <g1>Tüm torrentler için karşıya yüklemeyi şuna sınırla</g1> — varsayılan olarak kapalıdır. Tüm torrentlerinizin indirme ve paylaşma sırasında diğer eşlere gönderdiği toplam veriyi sınırlar. Bir torrentin kendi ilerleme penceresindeki karşıya yükleme limiti, bunun üzerine uygulanır. - <g2>Magnet bağlantılarını ve .torrent dosyalarını Mister Download Manager ile aç</g2> — Windows daha sonra tarayıcınızdaki magnet bağlantılarını ve Gezgin'deki <x3/> dosyalarını MDM ile açar. Bu yalnızca Windows hesabınız içindir; Windows'un <g4>Birlikte aç</g4> ayarında seçtiğiniz bir program ilk sırada kalır. Kurulum bunu sizin için açabilir."
   },
   "ec99486fc82e0b86": {
    "source": "Options",
@@ -16106,10 +16078,6 @@
    "source": "Download File Info",
    "text": "Dosya Bilgilerini İndir"
   },
-  "f385c86abe758db3": {
-   "source": "Last updated 2026-11-12",
-   "text": "Son güncelleme: 12.11.2026"
-  },
   "f3901fedc4a7dd52": {
    "source": "<g1>Browser extension</g1><g2>Downloads you click in Chrome, Edge, Brave, Opera, Vivaldi or Firefox go straight to MDM, sign-in included.</g2>",
    "text": "<g1>Tarayıcı uzantısı</g1><g2>Chrome, Edge, Brave, Opera, Vivaldi veya Firefox'ta tıkladığınız indirmeler, oturum açma dahil, doğrudan MDM'ye gider.</g2>"
@@ -16388,7 +16356,7 @@
   },
   "f89c54d71eb189a4": {
    "source": "If the graphics card is reset while MDM runs (a driver update), MDM starts again by itself. Lost twice in 10 minutes, it goes back to OpenGL, and <g1>View → Draw with</g1> says why.",
-   "text": "MDM çalışırken ekran kartı sıfırlanırsa (bir sürücü güncellemesi), MDM kendiliğinden yeniden başlar. 10 dakika içinde iki kez kaybolursa, OpenGL'e geri döner ve <g1>Görünüm → Şununla çiz</g1> nedeni belirtir."
+   "text": "MDM çalışırken grafik kartı sıfırlanırsa (bir sürücü güncellemesi), MDM kendiliğinden tekrar başlar. 10 dakika içinde iki kez kaybolursa, OpenGL'e geri döner ve <g1>Görünüm → Şununla çiz</g1> nedenini belirtir."
   },
   "f8b52274ed125d5f": {
    "source": "Tick <g1>Wake the computer to run this queue</g1> and a sleeping computer is woken a minute before the start time, so the network is back when the queue begins. It stays awake while the queue runs; afterwards its own sleep settings apply again. The line under the option says when the next wake is, or why there can't be one.",
@@ -16657,10 +16625,6 @@
   "fbba8f18d2fae06e": {
    "source": "A text box's bottom line while it can be typed in",
    "text": "Yazılabilir durumdayken metin kutusunun alt çizgisi"
-  },
-  "fbc41fd4efa0fd9a": {
-   "source": "Download a video; <x1/> takes a quality's selector from <x2/> (<x3/> = the best single file; <x4/> = the sound alone as the site has it, not converted; <x5/>, <x6/>, <x7/> or <x8/> = the sound as an MP3 at that bitrate, <x9/> at its best variable one; <x10/> = as Opus; <x11/> = as FLAC, lossless but no better than the site's sound; conversions need ffmpeg). <x12/>: MDM's own downloader brings each stream yt-dlp finds over this many connections (8 by default, 1 to 128), a stream in pieces (HLS, DASH) this many pieces at once. <x13/> saves subtitles beside it: language codes from <x14/> (<x15/>), or <x16/> for every one the uploader gave; <x17/> takes the site's automatic captions instead; <x18/> puts them into the video (needs ffmpeg, MP4 or MKV). <x19/> sends the downloads' connections, and yt-dlp's (and ffmpeg's), through one network adapter, as for <x20/>; when it isn't connected, nothing starts.",
-   "text": "Bir video indir; <x1/>, <x2/> içinden bir kalite seçici alır (<x3/> = en iyi tek dosya; <x4/> = sitenin sunduğu haliyle, dönüştürülmemiş sadece ses; <x5/>, <x6/>, <x7/> veya <x8/> = o bit hızında MP3 olarak ses, <x9/> en iyi değişken bit hızında; <x10/> = Opus olarak; <x11/> = FLAC olarak, kayıpsız ama sitenin sesinden daha iyi değil; dönüştürmeler için ffmpeg gerekir). <x12/>: MDM'nin kendi indiricisi, yt-dlp'nin bulduğu her akışı bu kadar bağlantı üzerinden (varsayılan 8, 1 ila 128), bir akışı parçalar halinde (HLS, DASH) aynı anda bu kadar parça halinde getirir. <x13/> altyazıları yanına kaydeder: <x14/> (<x15/>) dil kodları veya yükleyicinin verdiği her biri için <x16/>; <x17/> bunun yerine sitenin otomatik altyazılarını alır; <x18/> bunları videoya yerleştirir (ffmpeg, MP4 veya MKV gerekir). <x19/> indirmelerin bağlantılarını ve yt-dlp'nin (ve ffmpeg'in) bağlantılarını, <x20/> için olduğu gibi tek bir ağ bağdaştırıcısı üzerinden gönderir; bağlı değilse hiçbir şey başlamaz."
   },
   "fbc5c79e5fad811f": {
    "source": "<g1>VS Code</g1>: in <x2/>, or <g3>MCP: Add Server</g3> in the command palette:",
