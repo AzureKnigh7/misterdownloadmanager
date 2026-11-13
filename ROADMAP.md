@@ -557,6 +557,10 @@ Bug fixes from the first days of 0.5.0, a Safari extension, and more file types.
 
 These ship in the next version.
 
+- ✅ A helper (yt-dlp, ffmpeg, gallery-dl) that can't be downloaded says which server and why
+  (not found, refused, no answer, a secure connection an antivirus or a proxy reads, GitHub's
+  limit on requests, cut short) and what to do; its release list goes through the proxy set in
+  Options, as its download did ([#816](https://github.com/anefzaoui/misterdownloadmanager/issues/816))
 - ✅ Link grabber lists a web page's links when given the page's address (pasted, copied, in
   a list), as the browser's "Download all links" does, instead of only the page itself
   ([#705](https://github.com/anefzaoui/misterdownloadmanager/issues/705))
