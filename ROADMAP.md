@@ -557,6 +557,10 @@ Bug fixes from the first days of 0.5.0, a Safari extension, and more file types.
 
 These ship in the next version.
 
+- ✅ The progress window's connections table while a video downloads: MDM's own connections (as
+  many as Options → Connection gives), and yt-dlp's one connection while it looks the page up or
+  downloads a live stream itself, instead of an empty table
+  ([#793](https://github.com/anefzaoui/misterdownloadmanager/issues/793))
 - ✅ After the last byte, the progress window says **Verifying… (45%)** or **Merging… (45%)**
   and the list **45% verified**, the bar showing it in the accent colour, and **Finishing…** rather than
   **Connecting…**; a finished download's map of parts has no gaps
