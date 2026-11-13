@@ -557,6 +557,9 @@ Bug fixes from the first days of 0.5.0, a Safari extension, and more file types.
 
 These ship in the next version.
 
+- ✅ Windows 10 with a style theme (Metro, Adwaita, Aero…): no black band above the main window's
+  title bar, and its menus and clicks land where they show; framed as on Windows 11, as the
+  progress window already was ([#802](https://github.com/anefzaoui/misterdownloadmanager/issues/802))
 - ✅ A stream the browser played (an .m3u8) is looked up and downloaded with the Referer, Origin
   and cookies the browser sent with it, for its playlists and every piece too: a site's video
   server that serves its own pages' players only answered 403
