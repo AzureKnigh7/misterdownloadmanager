@@ -557,6 +557,10 @@ Bug fixes from the first days of 0.5.0, a Safari extension, and more file types.
 
 These ship in the next version.
 
+- ✅ After the last byte, the progress window says **Verifying… (45%)** or **Merging… (45%)**
+  and the list **45% verified**, the bar showing it in the accent colour, and **Finishing…** rather than
+  **Connecting…**; a finished download's map of parts has no gaps
+  ([#736](https://github.com/anefzaoui/misterdownloadmanager/issues/736))
 - ✅ Windows: the file dragged out of **Download complete** is moved or copied as Explorer does
   it (moved on the same drive or with Shift, copied to another drive or with Ctrl), no longer
   always copied, and its download follows a moved file to its new place; where MDM can't learn
