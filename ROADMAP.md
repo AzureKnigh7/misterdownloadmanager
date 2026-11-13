@@ -557,6 +557,10 @@ Bug fixes from the first days of 0.5.0, a Safari extension, and more file types.
 
 These ship in the next version.
 
+- ✅ A stream the browser played (an .m3u8) is looked up and downloaded with the Referer, Origin
+  and cookies the browser sent with it, for its playlists and every piece too: a site's video
+  server that serves its own pages' players only answered 403
+  ([#900](https://github.com/anefzaoui/misterdownloadmanager/issues/900))
 - ✅ A video of unknown size no longer reads 99.9 % from its first second while yt-dlp downloads it,
   and a video named after a page titled with its file's name gets its extension once (Dropbox's
   `Episode 31.mp4.mp4`) ([#622](https://github.com/anefzaoui/misterdownloadmanager/issues/622))
