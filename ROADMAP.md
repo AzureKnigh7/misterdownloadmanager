@@ -557,6 +557,10 @@ Bug fixes from the first days of 0.5.0, a Safari extension, and more file types.
 
 These ship in the next version.
 
+- ✅ A video's Address is its file's (the stream MDM downloads) in the progress window, Download
+  complete and File Properties, its page the web page it was obtained from; a download's page and
+  Referer are kept after a restart
+  ([#795](https://github.com/anefzaoui/misterdownloadmanager/issues/795))
 - ✅ The progress window's connections table while a video downloads: MDM's own connections (as
   many as Options → Connection gives), and yt-dlp's one connection while it looks the page up or
   downloads a live stream itself, instead of an empty table
