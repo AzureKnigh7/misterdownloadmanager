@@ -564,6 +564,9 @@ These ship in the next version.
   opens them), as a double-click in Explorer does, instead of failing and showing the folder
   ([#811](https://github.com/anefzaoui/misterdownloadmanager/issues/811),
   [#854](https://github.com/anefzaoui/misterdownloadmanager/pull/854))
+- ✅ The download list's column lines run straight from the header down: the rows' lines sat a
+  pixel to the right of the header's dividers
+  ([#924](https://github.com/anefzaoui/misterdownloadmanager/issues/924))
 - ✅ With a style theme (Metro, Adwaita, Aero…), windows minimize, maximize and restore with
   Windows' animation, as with Classic
   ([#874](https://github.com/anefzaoui/misterdownloadmanager/issues/874))
