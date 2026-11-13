@@ -557,6 +557,8 @@ Bug fixes from the first days of 0.5.0, a Safari extension, and more file types.
 
 These ship in the next version.
 
+- ✅ Windows: a menu closes at once when you click outside MDM, instead of 0.4 seconds later
+  ([#859](https://github.com/anefzaoui/misterdownloadmanager/issues/859))
 - ✅ No "The window stopped responding" report in the first minute after the computer wakes from
   sleep, while its disk, network and screen come back: such a stall is logged, and reported only
   if it lasts longer; every freeze report says what the window was doing when it stopped
