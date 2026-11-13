@@ -557,6 +557,9 @@ Bug fixes from the first days of 0.5.0, a Safari extension, and more file types.
 
 These ship in the next version.
 
+- ✅ Tests: the test server's HLS videos carry a real picture (H.264), so its video and sound
+  tracks merge into one file as a site's do; its video tracks held only sound, which made the
+  merge fail ("Error opening output files: Invalid argument"). Real sites' videos merged already
 - ✅ macOS: .torrent files open in MDM from Finder (double-click, Open With, the Dock's icon) and
   magnet links from the browser, and Torrent settings can make MDM their default app there
   ([#698](https://github.com/anefzaoui/misterdownloadmanager/issues/698))
