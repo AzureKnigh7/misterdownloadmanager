@@ -562,6 +562,8 @@ Bug fixes from the first days of 0.5.0, a Safari extension, and more file types.
 
 These ship in the next version.
 
+- ✅ The browser popup's **Never take downloads from <site>** says it worked, with **Undo**
+  ([#404](https://github.com/anefzaoui/misterdownloadmanager/issues/404))
 - ✅ A download to a disk slower than the network no longer stands still for a second or more
   just after it starts (a second save of its progress came too soon after the first); a server
   whose name the DNS doesn't answer in time says it couldn't be found, not that it didn't answer.
