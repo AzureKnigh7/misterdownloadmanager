@@ -557,6 +557,9 @@ Bug fixes from the first days of 0.5.0, a Safari extension, and more file types.
 
 These ship in the next version.
 
+- ✅ Linux: no crash when fontconfig offers a font MDM can't draw with (an old bitmap font for
+  Japanese): the best font that scales and MDM can read is used instead
+  ([#931](https://github.com/anefzaoui/misterdownloadmanager/issues/931))
 - ✅ Bangla reviewed by a native speaker: the main window, the list, the progress window, the
   dialogs and the tray, with the menus' letters on English letters
   ([#927](https://github.com/anefzaoui/misterdownloadmanager/pull/927))
