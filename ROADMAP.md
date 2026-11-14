@@ -562,6 +562,8 @@ Bug fixes from the first days of 0.5.0, a Safari extension, and more file types.
 
 These ship in the next version.
 
+- ✅ A download refused for its site's security certificate says why (expired, not trusted, for
+  another name) instead of a bare **Error** (follows [#762](https://github.com/anefzaoui/misterdownloadmanager/issues/762))
 - ✅ **Options → Downloads → Customize "Download progress" dialog → Edit...** works: it can turn
   off the progress window that opens when a download starts; the button was greyed and did
   nothing ([#1041](https://github.com/anefzaoui/misterdownloadmanager/issues/1041))
