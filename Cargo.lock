@@ -4528,6 +4528,7 @@ dependencies = [
  "image",
  "libc",
  "mdm-cli",
+ "mdm-cnl",
  "mdm-crash",
  "mdm-debrid",
  "mdm-engine",
@@ -4587,6 +4588,19 @@ dependencies = [
  "tempfile",
  "tokio",
  "tokio-util",
+ "url",
+]
+
+[[package]]
+name = "mdm-cnl"
+version = "0.5.2"
+dependencies = [
+ "aes",
+ "axum",
+ "base64 0.23.1",
+ "reqwest 0.13.5",
+ "tokio",
+ "tracing",
  "url",
 ]
 
