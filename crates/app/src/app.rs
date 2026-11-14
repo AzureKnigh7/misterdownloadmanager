@@ -4999,7 +4999,7 @@ impl App {
             let dir = self
                 .settings
                 .category_dir(Category::Torrents, &self.downloads);
-            self.add_remote_torrent(magnet, dir, Category::Torrents, true);
+            self.add_remote_torrent(magnet, dir, Category::Torrents, true, None);
             self.show_window(ctx);
             return;
         }
@@ -5046,15 +5046,22 @@ impl App {
         dir: PathBuf,
         category: Category,
         start_now: bool,
+        renamed: Option<String>,
     ) {
         let Some((account, service)) = self.torrent_account() else {
             return;
         };
-        let name = magnet
-            .query_pairs()
-            .find(|(k, _)| k == "dn")
-            .map(|(_, v)| mdm_engine::naming::sanitize(&v))
+        let name = renamed
+            .as_deref()
+            .map(mdm_engine::naming::sanitize)
             .filter(|n| !n.is_empty())
+            .or_else(|| {
+                magnet
+                    .query_pairs()
+                    .find(|(k, _)| k == "dn")
+                    .map(|(_, v)| mdm_engine::naming::sanitize(&v))
+                    .filter(|n| !n.is_empty())
+            })
             .unwrap_or_else(|| "torrent".to_owned());
         let target = dir.join(&name);
         let preexisting = crate::deferred_rename::folder_has_any_entries(&target);
@@ -5081,6 +5088,7 @@ impl App {
                 account,
                 transfer: None,
                 folder: dir,
+                renamed,
             });
         }
         self.selection.set(id);
@@ -5116,6 +5124,7 @@ impl App {
                 magnet: url,
                 transfer: spec.transfer.clone(),
                 folder: spec.folder.clone(),
+                renamed: spec.renamed.clone(),
                 net,
                 poll: std::time::Duration::from_secs(5),
             },
@@ -5141,14 +5150,22 @@ impl App {
     /// (#44): the .torrent's magnet link (its hash, name and trackers), all its files. The
     /// download added, if one was (not when the debrid account takes it).
     fn add_torrent(&mut self, add: crate::torrentdlg::TorrentAdd) -> Option<u64> {
+        let meta = &add.meta;
+        crate::torrent_rename::on_add_torrent(meta);
         if self.torrent_account().is_some()
             && let Some(magnet) =
-                mdm_torrent::magnet_link(&add.meta.torrent).and_then(|m| url::Url::parse(&m).ok())
+                mdm_torrent::magnet_link(&meta.torrent).and_then(|m| url::Url::parse(&m).ok())
         {
-            self.add_remote_torrent(magnet, add.dir.clone(), add.category, add.start_now);
+            let renamed = crate::torrent_rename::renamed_target(meta);
+            self.add_remote_torrent(
+                magnet,
+                add.dir.clone(),
+                add.category,
+                add.start_now,
+                renamed,
+            );
             return None;
         }
-        let meta = &add.meta;
         if let Err(e) = crate::torrents::save_torrent(&meta.info_hash, &meta.torrent) {
             self.notice = Some((
                 crate::i18n::mark("Add torrent"),
