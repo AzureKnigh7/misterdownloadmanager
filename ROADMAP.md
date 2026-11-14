@@ -562,6 +562,9 @@ Bug fixes from the first days of 0.5.0, a Safari extension, and more file types.
 
 These ship in the next version.
 
+- ✅ Firefox: one Download video button over a video, not two, after the extension is updated while
+  it shows (seen on YouTube in full screen)
+  ([#336](https://github.com/anefzaoui/misterdownloadmanager/issues/336))
 - ✅ Alt+click (Option+click on a Mac) leaves a download to the browser in Firefox too, where it
   did nothing, and when the link redirects or a page's script starts the download
   ([#332](https://github.com/anefzaoui/misterdownloadmanager/issues/332))
