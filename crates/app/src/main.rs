@@ -29,6 +29,7 @@ mod grabber;
 mod headless;
 mod help;
 mod helpers;
+mod hotkey;
 mod i18n;
 mod icons;
 mod langpick;

@@ -1046,6 +1046,7 @@ pub struct App {
     #[cfg(target_os = "linux")]
     tray_setup: Option<crate::tray::Setup>,
     tray_limiter: Option<bool>,
+    hotkey: Option<crate::hotkey::GlobalHotkey>,
     /// When the main window was last seen focused: a tray click steals the focus first
     /// (the taskbar becomes foreground), so a click on a frontmost window reads as
     /// unfocused by the time Toggle runs. Within [`TRAY_TOGGLE_GRACE`] it still counts
@@ -1697,6 +1698,7 @@ impl App {
             #[cfg(target_os = "linux")]
             tray_setup: None,
             tray_limiter: None,
+            hotkey: None,
             tray_last_focused: None,
             // Started with the session (#226): hidden from the first frame.
             hidden: start == crate::Start::Session,
@@ -3724,6 +3726,34 @@ impl App {
         if !crate::offscreen() {
             ctx.send_viewport_cmd(egui::ViewportCommand::Focus);
         }
+        ctx.request_repaint();
+    }
+
+    /// Global shortcut (#558): show and focus the window when hidden, minimized, or behind
+    /// another application; otherwise hide it to the notification area (or minimize it).
+    fn toggle_window(&mut self, ctx: &egui::Context) {
+        let minimized = ctx.input(|i| i.viewport().minimized == Some(true));
+        #[cfg(target_os = "macos")]
+        let active_and_visible =
+            !self.hidden && !minimized && crate::unix::macos_is_active_and_visible();
+        #[cfg(not(target_os = "macos"))]
+        let active_and_visible =
+            !self.hidden && !minimized && ctx.input(|i| i.viewport().focused.unwrap_or(true));
+        if !active_and_visible {
+            self.show_window(ctx);
+            #[cfg(target_os = "macos")]
+            if !crate::offscreen() {
+                crate::unix::macos_activate_and_show();
+            }
+        } else if self.tray.is_some() && self.tray_icon_now() != crate::tray::Icon::Gone {
+            self.hide_to_tray(ctx);
+            #[cfg(target_os = "macos")]
+            if !crate::offscreen() {
+                crate::unix::macos_hide_window();
+            }
+        } else {
+            ctx.send_viewport_cmd(egui::ViewportCommand::Minimized(true));
+        }
     }
 
     /// Before a handoff's dialog: the main window stays where it is (hidden, minimized) and
@@ -3845,6 +3875,30 @@ impl App {
                     self.tray_setup = None;
                 }
                 crate::tray::Came::Failed => self.tray_setup = None,
+            }
+        }
+        if !crate::offscreen() {
+            let spec = self
+                .options
+                .as_ref()
+                .map_or(self.settings.show_hide_hotkey.as_str(), |o| {
+                    o.draft_hotkey()
+                })
+                .to_owned();
+            let recording = self
+                .options
+                .as_ref()
+                .is_some_and(|o| o.is_recording_hotkey());
+            let hk = self
+                .hotkey
+                .get_or_insert_with(|| crate::hotkey::GlobalHotkey::new(ctx, &spec));
+            hk.apply(ctx, &spec);
+            let taken = hk.is_taken();
+            if let Some(o) = &mut self.options {
+                o.set_hotkey_taken(taken);
+            }
+            if hk.take_fired() && !recording {
+                self.toggle_window(ctx);
             }
         }
         if let Some(t) = &self.tray
