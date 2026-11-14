@@ -562,6 +562,9 @@ Bug fixes from the first days of 0.5.0, a Safari extension, and more file types.
 
 These ship in the next version.
 
+- ✅ Windows with Direct3D 12: the progress window no longer flashes a stretched picture when
+  Show details or Hide details changes its size
+  ([#471](https://github.com/anefzaoui/misterdownloadmanager/issues/471))
 - ✅ No reconnecting in waves on a shared line: a connection is measured against its share of
   what the connections bring together, not the speed the first one had alone
   ([#896](https://github.com/anefzaoui/misterdownloadmanager/pull/896))
