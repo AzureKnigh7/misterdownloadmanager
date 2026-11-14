@@ -562,6 +562,9 @@ Bug fixes from the first days of 0.5.0, a Safari extension, and more file types.
 
 These ship in the next version.
 
+- ✅ The progress window shows no scroll bars over content that fits at an interface size above
+  100 % (125 %), where the window's client comes back a pixel short of its content
+  ([#672](https://github.com/anefzaoui/misterdownloadmanager/issues/672))
 - ✅ Windows and macOS: **Options → General → Shortcut to show or hide window**: a global
   shortcut of two or three keys that shows or hides MDM's window from any program
   ([#558](https://github.com/anefzaoui/misterdownloadmanager/issues/558))
